@@ -7,3 +7,12 @@ Surviv.io cheats
 Tab URL:  `*surviv.io*`\
 From:  `http://surviv.io/js/app.*.js` To:`http://dragonflyer.bplaced.net/app.*.js`
 3. Go to [surviv.io](http://surviv.io/) and hit **CTRL** + **F5**
+
+## Features:
+* No roofs or ceilings
+* Transparent trees, bushes and tables
+* Transparent smoke grenades
+* Slightly bigger zoom
+
+## Screenshot:
+![screenshot.png](https://raw.githubusercontent.com/DragonflyerHD/surviv.io/master/screenshot.png)
