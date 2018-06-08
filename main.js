@@ -3213,14 +3213,14 @@ webpackJsonp([0], {
 			h = a("9xSA"),
 			g = a("+0OL"),
 			f = g.Action,
-			y = a("0od3"),
-			b = a("yp2f"),
+			b = a("0od3"),
+			y = a("yp2f"),
 			x = a("Tf6H"),
 			v = a("/2+T"),
 			k = a("zinx"),
 			_ = a("Jr6A"),
 			w = g.DamageType,
-			S = b.PickupMsgType,
+			S = y.PickupMsgType,
 			M = 6,
 			T = 750,
 			P = {
@@ -3344,17 +3344,17 @@ webpackJsonp([0], {
 					}
 					for (var h = 0; h < 4; h++) {
 						var f = n("ui-weapon-id-" + (h + 1)),
-							y = {
+							b = {
 								div: f,
 								name: f.getElementsByClassName("ui-weapon-name")[0],
 								number: f.getElementsByClassName("ui-weapon-number")[0],
 								image: f.getElementsByClassName("ui-weapon-image")[0],
 								ammo: f.getElementsByClassName("ui-weapon-ammo-counter")[0]
 							};
-						this.dom.weapons.push(y)
+						this.dom.weapons.push(b)
 					}
-					for (var b = d(), x = 0; x < b.length; x++) {
-						var v = b[x],
+					for (var y = d(), x = 0; x < y.length; x++) {
+						var v = y[x],
 							k = {
 								scopeType: v,
 								div: n("ui-scope-" + v)
@@ -3478,15 +3478,15 @@ webpackJsonp([0], {
 							}
 						r.pickupMessage.ticker += e;
 						var u = r.pickupMessage.ticker,
-							b = r.pickupMessage.duration;
-						r.pickupMessage.opacity = y.smoothstep(u, 0, .2) * (1 - y.smoothstep(u, b, b + .2));
+							y = r.pickupMessage.duration;
+						r.pickupMessage.opacity = b.smoothstep(u, 0, .2) * (1 - b.smoothstep(u, y, y + .2));
 						for (var _ = 0, w = 0; w < r.killFeed.length; w++) {
 							var S = r.killFeed[w];
 							S.ticker += e;
 							var M = S.ticker;
-							S.offset = _, S.opacity = y.smoothstep(M, 0, .25) * (1 - y.smoothstep(M, 6, 6.5)), _ += y.min(M / .25, 1), k.mobile && (S.opacity = M < 6.5 ? 1 : 0)
+							S.offset = _, S.opacity = b.smoothstep(M, 0, .25) * (1 - b.smoothstep(M, 6, 6.5)), _ += b.min(M / .25, 1), k.mobile && (S.opacity = M < 6.5 ? 1 : 0)
 						}
-						r.health = t.netData.dead ? 0 : y.max(t.localData.health, 1), r.boost = t.localData.boost, r.downed = t.netData.downed;
+						r.health = t.netData.dead ? 0 : b.max(t.localData.health, 1), r.boost = t.localData.boost, r.downed = t.netData.downed;
 						var C = P.None,
 							I = null,
 							z = !0;
@@ -3531,9 +3531,9 @@ webpackJsonp([0], {
 							Q.equipped = Z == t.localData.curWeapIdx, Q.selectable = "" != J.name && !a;
 							var ee = Q.equipped ? 1 : .6,
 								te = ee - Q.opacity,
-								ae = y.min(te, y.sign(te) * e / .15);
-							Q.opacity = y.clamp(Q.opacity + ae, 0, 1), k.mobile && (Q.opacity = ee), Q.ticker += e, Q.equipped && $ || (Q.ticker = 0), this.frameCount < 2 && (Q.ticker = 1);
-							var ie = y.min(Q.ticker / .09, Math.PI),
+								ae = b.min(te, b.sign(te) * e / .15);
+							Q.opacity = b.clamp(Q.opacity + ae, 0, 1), k.mobile && (Q.opacity = ee), Q.ticker += e, Q.equipped && $ || (Q.ticker = 0), this.frameCount < 2 && (Q.ticker = 1);
+							var ie = b.min(Q.ticker / .09, Math.PI),
 								oe = Math.sin(ie);
 							Q.width = oe < .001 ? 0 : oe, k.mobile && (Q.width = 0)
 						}
@@ -3550,19 +3550,19 @@ webpackJsonp([0], {
 							var ue = r.loot[pe],
 								he = ue.count;
 							ue.count = t.localData.inventory[ue.type] || 0, ue.maximum = g.bagSizes[ue.type][me], ue.selectable = ue.count > 0 && !a, ue.count > he && (ue.ticker = 0), this.frameCount < 2 && (ue.ticker = 1), ue.ticker += e;
-							var ge = y.min(ue.ticker / .05, Math.PI),
+							var ge = b.min(ue.ticker / .05, Math.PI),
 								fe = Math.sin(ge);
 							ue.width = fe < .001 ? 0 : fe, k.mobile && (ue.width = 0)
 						}
-						for (var ye = 0; ye < r.gear.length; ye++) {
-							var be = r.gear[ye],
+						for (var be = 0; be < r.gear.length; be++) {
+							var ye = r.gear[be],
 								xe = "";
-							"chest" == be.type ? xe = t.netData.chest : "helmet" == be.type ? xe = t.netData.helmet : "backpack" == be.type && "backpack00" == (xe = t.netData.backpack) && (xe = "");
-							var ve = be.item;
-							be.item = xe, be.selectable = "" != xe && !a, ve != be.item && (be.ticker = 0), this.frameCount < 2 && (be.ticker = 1), be.ticker += e;
-							var ke = y.min(be.ticker / .05, Math.PI),
+							"chest" == ye.type ? xe = t.netData.chest : "helmet" == ye.type ? xe = t.netData.helmet : "backpack" == ye.type && "backpack00" == (xe = t.netData.backpack) && (xe = "");
+							var ve = ye.item;
+							ye.item = xe, ye.selectable = "" != xe && !a, ve != ye.item && (ye.ticker = 0), this.frameCount < 2 && (ye.ticker = 1), ye.ticker += e;
+							var ke = b.min(ye.ticker / .05, Math.PI),
 								_e = Math.sin(ke);
-							be.width = _e < .001 ? 0 : _e, k.mobile && (be.width = 0)
+							ye.width = _e < .001 ? 0 : _e, k.mobile && (ye.width = 0)
 						}
 						var we = c(this.oldState, this.newState, 0 == this.frameCount++);
 						this.render(we, this.newState), l(this.newState, this.oldState)
@@ -3609,18 +3609,18 @@ webpackJsonp([0], {
 									health: 0,
 									color: [255, 0, 0]
 								}], d = 0, m = Math.ceil(t.health); c[d].health > m && d < c.length - 1;) d++;
-							var p = c[y.max(d - 1, 0)],
+							var p = c[b.max(d - 1, 0)],
 								u = c[d],
-								h = y.delerp(t.health, p.health, u.health),
-								f = [Math.floor(y.lerp(h, p.color[0], u.color[0])), Math.floor(y.lerp(h, p.color[1], u.color[1])), Math.floor(y.lerp(h, p.color[2], u.color[2]))];
+								h = b.delerp(t.health, p.health, u.health),
+								f = [Math.floor(b.lerp(h, p.color[0], u.color[0])), Math.floor(b.lerp(h, p.color[1], u.color[1])), Math.floor(b.lerp(h, p.color[2], u.color[2]))];
 							t.downed && (f = [255, 0, 0]), a.health.inner.style.backgroundColor = "rgba(" + f[0] + ", " + f[1] + ", " + f[2] + ", 1.0)", a.health.inner.style.width = t.health + "%", a.health.depleted.style.width = t.health + "%", a.health.depleted.style.display = t.health > 0 ? "block" : "none", t.health > 25 ? a.health.inner.classList.remove("ui-bar-danger") : a.health.inner.classList.add("ui-bar-danger")
 						}
 						if (e.boost) {
-							for (var b = g.player.boostBreakpoints, x = 0, v = 0; v < b.length; v++) x += b[v];
+							for (var y = g.player.boostBreakpoints, x = 0, v = 0; v < y.length; v++) x += y[v];
 							for (var w = t.boost / 100, S = 0; S < a.boost.bars.length; S++) {
-								var M = b[S] / x,
-									T = y.clamp(w / M, 0, 1);
-								w = y.max(w - M, 0), a.boost.bars[S].style.width = 100 * T + "%"
+								var M = y[S] / x,
+									T = b.clamp(w / M, 0, 1);
+								w = b.max(w - M, 0), a.boost.bars[S].style.width = 100 * T + "%"
 							}
 							a.boost.div.style.opacity = 0 == t.boost ? 0 : 1
 						}
@@ -3641,7 +3641,7 @@ webpackJsonp([0], {
 								z.name.innerHTML = O, z.image.src = L, z.image.style.display = D ? "inline" : "none", z.image.style.transform = E ? "rotate(0deg)" : ""
 							}
 							if (I.equipped && (z.div.style.backgroundColor = A.equipped ? "rgba(0, 0, 0, 0.4)" : "rgba(0, 0, 0, 0)"), I.selectable && (z.div.style.pointerEvents = "" != A.name && A.selectable ? "auto" : "none"), I.width) {
-								var F = y.lerp(A.width, 83.33, 100);
+								var F = b.lerp(A.width, 83.33, 100);
 								z.div.style.width = F + "%"
 							}
 							I.opacity && (z.div.style.opacity = A.opacity), I.ammo && z.ammo && (z.ammo.innerHTML = A.ammo, z.ammo.style.display = A.ammo > 0 ? "block" : "none")
@@ -3935,8 +3935,8 @@ webpackJsonp([0], {
 			h = a("zinx"),
 			g = a("Jr6A"),
 			f = (a("yp2f"), a("0od3")),
-			y = a("+0OL"),
-			b = a("Mzdc"),
+			b = a("+0OL"),
+			y = a("Mzdc"),
 			x = (a("r4ug"), a("DI/9")),
 			v = a("zgif"),
 			k = function() {
@@ -3964,7 +3964,7 @@ webpackJsonp([0], {
 					}, this.stairMask = new s.Graphics, this.stairMaskDirty = !0, this.mapData = {
 						places: [],
 						objects: []
-					}, this.dataLoaded = !1, this.mapTexture = null, this.obstaclePool = new p.Pool(x), this.lootSpawnerPool = new p.Pool(k), this.buildingPool = new p.Pool(b), this.structurePool = new p.Pool(v), this.deadObstacleIds = [], this.deadCeilingIds = [], this.terrain = null, this.ripples = []
+					}, this.dataLoaded = !1, this.mapTexture = null, this.obstaclePool = new p.Pool(x), this.lootSpawnerPool = new p.Pool(k), this.buildingPool = new p.Pool(y), this.structurePool = new p.Pool(v), this.deadObstacleIds = [], this.deadCeilingIds = [], this.terrain = null, this.ripples = []
 				}
 				return r(e, [{
 					key: "free",
@@ -4013,8 +4013,8 @@ webpackJsonp([0], {
 							if (!(f.life <= 0))
 								if (f.delay -= e, f.delay <= 0 && (f.life -= e, f.scale += .5 * e, f.alpha -= e), f.life < 0) f.sprite.visible = !1;
 								else {
-									var y = f.scale / n.ppu;
-									f.sprite.position.set(f.pos.x, f.pos.y), f.sprite.scale.set(y, y), f.sprite.alpha = f.alpha, f.sprite.visible = f.delay <= 0
+									var b = f.scale / n.ppu;
+									f.sprite.position.set(f.pos.x, f.pos.y), f.sprite.scale.set(b, b), f.sprite.alpha = f.alpha, f.sprite.visible = f.delay <= 0
 								}
 						}
 					}
@@ -4041,7 +4041,7 @@ webpackJsonp([0], {
 								y: r
 							};
 						t.beginFill(u.water), t.moveTo(d.x, d.y), t.lineTo(m.x, m.y), t.lineTo(c.x, c.y), t.lineTo(l.x, l.y), n(t, s.shore), t.addHole(), t.closePath(), e.beginFill(u.beach), n(e, s.shore), n(e, s.grass), e.addHole(), e.endFill(), e.beginFill(u.grass), n(e, s.grass), e.endFill(), e.lineStyle(a, 0, .15);
-						for (var p = 0; p <= i; p += y.map.gridSize) {
+						for (var p = 0; p <= i; p += b.map.gridSize) {
 							o(e, {
 								x: p,
 								y: 0
@@ -4050,7 +4050,7 @@ webpackJsonp([0], {
 								y: r
 							})
 						}
-						for (var h = 0; h <= r; h += y.map.gridSize) {
+						for (var h = 0; h <= r; h += b.map.gridSize) {
 							o(e, {
 								x: 0,
 								y: h
@@ -4104,11 +4104,11 @@ webpackJsonp([0], {
 							var u = d / p,
 								f = new s.Graphics;
 							this.renderTerrain(f, f, u);
-							var y = {
+							var b = {
 									x: 0,
 									y: 0
 								},
-								b = {
+								y = {
 									x: r,
 									y: 0
 								},
@@ -4120,7 +4120,7 @@ webpackJsonp([0], {
 									x: r,
 									y: d
 								};
-							f.lineStyle(2 * u, 0, 1), o(f, y, x), o(f, x, v), o(f, v, b), o(f, b, y), f.position.y = d, f.scale.y = -1, t.addChild(f);
+							f.lineStyle(2 * u, 0, 1), o(f, b, x), o(f, x, v), o(f, v, y), o(f, y, b), f.position.y = d, f.scale.y = -1, t.addChild(f);
 							for (var k = [], _ = 0; _ < n.length; _++) {
 								var w = n[_];
 								k.push(this.getMinimapRender(w))
@@ -4621,7 +4621,7 @@ webpackJsonp([0], {
 						pos: e
 					}), this.uiManager.displayMapLarge(!0));
 					else {
-						b[this.emoteSelector.ping].pingMap && (e = this.uiManager.getWorldPosFromMapPos(this.bigmapPingPos || this.emoteScreenPos, this.map, this.camera), e || (e = this.camera.screenToPoint(this.emoteScreenPos)), e.x = g.clamp(e.x, 0, this.uiManager.mapWidth), e.y = g.clamp(e.y, 0, this.uiManager.mapHeight), this.sendPing({
+						y[this.emoteSelector.ping].pingMap && (e = this.uiManager.getWorldPosFromMapPos(this.bigmapPingPos || this.emoteScreenPos, this.map, this.camera), e || (e = this.camera.screenToPoint(this.emoteScreenPos)), e.x = g.clamp(e.x, 0, this.uiManager.mapWidth), e.y = g.clamp(e.y, 0, this.uiManager.mapHeight), this.sendPing({
 							type: this.emoteSelector.ping,
 							pos: e
 						}))
@@ -4638,7 +4638,7 @@ webpackJsonp([0], {
 						pos: e
 					})), this.inputReset()
 				}
-			}, this.emoteTouchedPos = null, this.bigmapPingPos = null, y.touch && (this.emoteElems = r(".ui-emote"), this.emoteElems.css("pointer-events", "auto"), this.bigmapCollision = r("#big-map-collision"), this.bigmapCollision.on("touchend", function(e) {
+			}, this.emoteTouchedPos = null, this.bigmapPingPos = null, b.touch && (this.emoteElems = r(".ui-emote"), this.emoteElems.css("pointer-events", "auto"), this.bigmapCollision = r("#big-map-collision"), this.bigmapCollision.on("touchend", function(e) {
 				e.stopPropagation(), u.bigmapPingPos = {
 					x: e.originalEvent.changedTouches[0].pageX,
 					y: e.originalEvent.changedTouches[0].pageY
@@ -4762,7 +4762,7 @@ webpackJsonp([0], {
 			for (var v in f)
 				if (f.hasOwnProperty(v)) {
 					var k = f[v],
-						_ = k.ping != x.None ? b[k.ping] : m[k.emote],
+						_ = k.ping != x.None ? y[k.ping] : m[k.emote],
 						w = i(k.vA),
 						S = i(k.vC),
 						M = _.texture;
@@ -4820,7 +4820,7 @@ webpackJsonp([0], {
 					}
 				})
 			}
-			this.emoteLifeIn = .75, this.emoteLife = 1, this.emoteLifeOut = .1, this.pingFadeIn = .5, this.pingLife = 4.25, this.pingFadeOut = .1, this.wedgeOpacityReset = y.touch ? 1 : .75, this.teamEmoteOpacityReset = .2, this.emotes = [], this.newPings = [], this.newEmotes = []
+			this.emoteLifeIn = .75, this.emoteLife = 1, this.emoteLifeOut = .1, this.pingFadeIn = .5, this.pingLife = 4.25, this.pingFadeOut = .1, this.wedgeOpacityReset = b.touch ? 1 : .75, this.teamEmoteOpacityReset = .2, this.emotes = [], this.newPings = [], this.newEmotes = []
 		}
 		var n = Object.assign || function(e) {
 				for (var t = 1; t < arguments.length; t++) {
@@ -4840,14 +4840,14 @@ webpackJsonp([0], {
 			h = a("/2+T"),
 			g = a("0od3"),
 			f = a("Tf6H"),
-			y = a("zinx"),
-			b = (a("EZ6M"), a("moUH").kPings),
+			b = a("zinx"),
+			y = (a("EZ6M"), a("moUH").kPings),
 			x = a("moUH").Ping,
 			v = (a("S40U"), a("xgte")),
 			k = v.RenderType;
 		o.prototype = {
 			free: function() {
-				r(document).off("keydown"), r(document).off("keyup"), r(document).off("mousedown"), r(document).off("mouseup"), r(window).off("blur"), y.touch && (r(document).off("touchstart"), this.emoteButtonElem.off("touchstart"), this.emoteElems.off("touchstart"), this.bigmapCollision.off("touchend")), this.init()
+				r(document).off("keydown"), r(document).off("keyup"), r(document).off("mousedown"), r(document).off("mouseup"), r(window).off("blur"), b.touch && (r(document).off("touchstart"), this.emoteButtonElem.off("touchstart"), this.emoteElems.off("touchstart"), this.bigmapCollision.off("touchend")), this.init()
 			},
 			init: function() {
 				this.emoteWheelsGreyed = !1, this.emoteWheels.css("opacity", 1), this.teamEmotesGreyed = !1, this.teamEmotes.css("opacity", 1), this.disable = !1, this.inputReset()
@@ -4866,7 +4866,7 @@ webpackJsonp([0], {
 			},
 			addPing: function(e) {
 				if (this.activePlayer) {
-					var t = b[e.type];
+					var t = y[e.type];
 					if (t) {
 						this.teamId = this.playerBarn.getPlayerInfo(this.activePlayer.__id).teamId;
 						for (var a = this.playerBarn.getTeamInfo(this.teamId), i = a.playerIds.length, o = 0; o < i; o++) {
@@ -4905,8 +4905,8 @@ webpackJsonp([0], {
 				var c = this.playerBarn,
 					p = this.camera;
 				if (this.activePlayer = a, t == a.__id && !a.netData.dead || this.disable || (this.free(), this.disable = !0), !this.disable) {
-					var b = a.localData.weapons[a.localData.curWeapIdx],
-						v = s.items[b.name],
+					var y = a.localData.weapons[a.localData.curWeapIdx],
+						v = s.items[y.name],
 						_ = "";
 					if (v && (_ = v.ammo ? v.ammo : _), this.wheelKeyTriggered = this.pingKeyTriggered || this.emoteMouseTriggered, this.emoteSoftTicker -= e, this.emoteCounter >= s.player.emoteThreshold && this.emoteHardTicker > 0 ? (this.emoteHardTicker -= e, this.emoteHardTicker < 0 && (this.emoteCounter = 0)) : this.emoteSoftTicker < 0 && this.emoteCounter > 0 && (this.emoteCounter--, this.emoteSoftTicker = 1.5 * s.player.emoteSoftCooldown), !this.pingMouseTriggered && !this.emoteMouseTriggered || this.wheelDisplayed || (this.parentDisplayed = this.pingMouseTriggered ? this.teamPingWheel : this.emoteWheel, this.parentDisplayed.css({
 							display: "block",
@@ -4917,7 +4917,7 @@ webpackJsonp([0], {
 						else {
 							this.emoteHardTicker > 0 && !this.emoteWheelsGreyed ? (this.emoteWheels.css("opacity", .5), this.emoteWheelsGreyed = !0) : this.emoteHardTicker <= 0 && this.emoteWheelsGreyed && (this.emoteWheels.css("opacity", 1), this.emoteWheelsGreyed = !1), this.teamEmotesGreyed || 1 != n || (this.teamEmotes.css("opacity", this.teamEmoteOpacityReset), this.teamEmotesGreyed = !0);
 							var w = null;
-							if (x.None, y.touch && (o = this.emoteTouchedPos), o) {
+							if (x.None, b.touch && (o = this.emoteTouchedPos), o) {
 								var S = h.sub(o, this.emoteScreenPos);
 								S.y *= -1;
 								for (var M = h.length(S), T = i(S), P = 0; P < this.displayedSelectors.length; P++) {
@@ -4954,7 +4954,7 @@ webpackJsonp([0], {
 									M <= 35 && !A && this.emoteHardTicker <= 0 && !O ? w = C : g.isAngleBetween(T, C.angleC, C.angleA) && M > 35 && A && this.emoteHardTicker <= 0 && !O ? w = C : C.highlightDisplayed && (C.parent.css("opacity", this.wedgeOpacityReset), C.highlight.css("display", "none"), C.highlightDisplayed = !1)
 								}
 							}
-							w && (this.emoteSelector = w, w.highlightDisplayed || (w.parent.css("opacity", 1), w.highlight.css("display", "block"), w.highlightDisplayed = !0), y.touch && this.emoteTouchedPos && (this.pingMouseTriggered ? this.triggerPing() : this.triggerEmote()))
+							w && (this.emoteSelector = w, w.highlightDisplayed || (w.parent.css("opacity", 1), w.highlight.css("display", "block"), w.highlightDisplayed = !0), b.touch && this.emoteTouchedPos && (this.pingMouseTriggered ? this.triggerPing() : this.triggerEmote()))
 						}
 				}
 				for (var L = 0; L < this.emotes.length; L++) {
@@ -5018,9 +5018,9 @@ webpackJsonp([0], {
 										re = $.fadeOut < 0;
 										var ge = pe ? p.pointToScreen(se).x : g.clamp(me.x, 64, p.screenWidth - 64),
 											fe = pe ? p.pointToScreen(se).y : g.clamp(me.y, 64, p.screenHeight - 64),
-											ye = p.pointToScreen(se).x,
-											be = p.pointToScreen(se).y;
-										ie.position.x = ye, ie.position.y = be, ae.position.x = ye, ae.position.y = be, oe.position.x = ge, oe.position.y = fe, oe.rotation = de, ne.position.x = ge, ne.position.y = fe;
+											be = p.pointToScreen(se).x,
+											ye = p.pointToScreen(se).y;
+										ie.position.x = be, ie.position.y = ye, ae.position.x = be, ae.position.y = ye, oe.position.x = ge, oe.position.y = fe, oe.rotation = de, ne.position.x = ge, ne.position.y = fe;
 										var xe = ae.alpha <= 0 ? 1 : ae.alpha - e;
 										ae.alpha = xe;
 										var ve = p.pixels($.borderSprite.baseScale * (2 - xe));
@@ -5631,10 +5631,10 @@ webpackJsonp([0], {
 					var h = o.add(e, o.mul(l, n)),
 						g = o.add(a, o.mul(o.sub(i, a), .5)),
 						f = o.sub(h, g),
-						y = o.mul(o.sub(a, i), .5);
+						b = o.mul(o.sub(a, i), .5);
 					return {
 						point: h,
-						normal: o.normalizeSafe(o.create(parseInt(f.x / Math.abs(y.x) * 1.001), parseInt(f.y / Math.abs(y.y) * 1.001)), o.create(1, 0))
+						normal: o.normalizeSafe(o.create(parseInt(f.x / Math.abs(b.x) * 1.001), parseInt(f.y / Math.abs(b.y) * 1.001)), o.create(1, 0))
 					}
 				},
 				intersectRayAabb: function(e, t, a, i) {
@@ -6127,13 +6127,13 @@ webpackJsonp([0], {
 							[5120, 1.4142, -30],
 							[10240, 1.4142, -25]
 						], g = this.muffleNode, f = 0; f < h.length; f++) {
-						var y = this.ctx.createBiquadFilter();
-						g.connect(y), g = y, y.type = "peaking", y.frequency.setValueAtTime(h[f][0], 0), y.Q.setValueAtTime(h[f][1], 0), y.gain.setValueAtTime(h[f][2], 0)
+						var b = this.ctx.createBiquadFilter();
+						g.connect(b), g = b, b.type = "peaking", b.frequency.setValueAtTime(h[f][0], 0), b.Q.setValueAtTime(h[f][1], 0), b.gain.setValueAtTime(h[f][2], 0)
 					}
 					g.connect(this.reverbNode), this.files = {}, this.sounds = {}, this.instances = [];
-					for (var b = 0; b < c; b++) {
+					for (var y = 0; y < c; y++) {
 						var x = new d(this.ctx);
-						this.instances[b] = x
+						this.instances[y] = x
 					}
 					if (this.instanceId = 0, this.playingInstances = [], m = new d(this.ctx), u = new p(m), this.reverbs = {}, this.activeReverbs = [], this.reverbFadeEndTime = 0, this.volume = 1, this.volumeOld = this.volume, this.muted = !1, this.mutedOld = this.muted, "suspended" == this.ctx.state) {
 						var v = function e() {
@@ -6209,19 +6209,19 @@ webpackJsonp([0], {
 									return m.volume = Math.sqrt(h), m.pan = g / Math.max(.001, f), u
 								}
 							}
-						for (var y = 0; y < c && (++this.instanceId, this.instances[this.instanceId % c].sound); y++);
-						var b = this.instances[this.instanceId % c];
-						if (b.sound) return console.error("All " + c + " sound instances in use. You are using way too many sounds!"), u;
-						b.id = this.instanceId;
-						var x = b.paramEvents > 150,
-							v = b.paramEvents > 20 && !(this.instanceId % 7);
-						for ((x || v) && b.reallocNodes(); a.instances.length >= a.maxInstances;) {
+						for (var b = 0; b < c && (++this.instanceId, this.instances[this.instanceId % c].sound); b++);
+						var y = this.instances[this.instanceId % c];
+						if (y.sound) return console.error("All " + c + " sound instances in use. You are using way too many sounds!"), u;
+						y.id = this.instanceId;
+						var x = y.paramEvents > 150,
+							v = y.paramEvents > 20 && !(this.instanceId % 7);
+						for ((x || v) && y.reallocNodes(); a.instances.length >= a.maxInstances;) {
 							for (var k = a.instances[0], _ = 1; _ < a.instances.length; _++) k.stopTime > a.instances[_].stopTime && (k = a.instances[_]);
 							k.disconnect()
 						}
-						b.sound = a, a.instances.push(b);
+						y.sound = a, a.instances.push(y);
 						var w = "none" === i ? this.masterGainNode : "reverb" === i ? this.reverbNode : this.muffleNode;
-						return b.start(w, a.file.buffer, o, n, r, s), -1 == this.playingInstances.indexOf(b) && this.playingInstances.push(b), new p(b)
+						return y.start(w, a.file.buffer, o, n, r, s), -1 == this.playingInstances.indexOf(y) && this.playingInstances.push(y), new p(y)
 					}
 				}, {
 					key: "registerReverb",
@@ -6439,8 +6439,8 @@ webpackJsonp([0], {
 						d.push(D.toAabb(f))
 					}
 				}
-				var y = A.boundingAabb(d);
-				return D.createAabb(y.min, y.max)
+				var b = A.boundingAabb(d);
+				return D.createAabb(b.min, b.max)
 			}
 			return z(t.collision), t.collision
 		}
@@ -6713,7 +6713,7 @@ webpackJsonp([0], {
 			}, e || {})
 		}
 
-		function y(e) {
+		function b(e) {
 			var t = [{
 					type: "container_wall_top",
 					pos: L.create(0, 7.95),
@@ -6805,7 +6805,7 @@ webpackJsonp([0], {
 			}
 		}
 
-		function b(e) {
+		function y(e) {
 			return c({
 				type: "obstacle",
 				scale: {
@@ -7503,8 +7503,8 @@ webpackJsonp([0], {
 						sprite: "img/map/map-control-panel-03.svg"
 					}
 				}),
-				crate_01: b(),
-				crate_02: b({
+				crate_01: y(),
+				crate_02: y({
 					health: 140,
 					loot: [r("tier_soviet", 3, 5)],
 					map: {
@@ -7521,7 +7521,7 @@ webpackJsonp([0], {
 						explode: "crate_break_01"
 					}
 				}),
-				crate_03: b({
+				crate_03: y({
 					health: 100,
 					collision: D.createAabbExtents(L.create(0, 0), L.create(1.575, 1.575)),
 					loot: [r("tier_throwables", 2, 4)],
@@ -7541,7 +7541,7 @@ webpackJsonp([0], {
 						explode: "crate_break_01"
 					}
 				}),
-				crate_04: b({
+				crate_04: y({
 					destructible: !1,
 					hitParticle: "greenChip",
 					loot: [],
@@ -7556,7 +7556,7 @@ webpackJsonp([0], {
 						punch: "ammo_crate_bullet"
 					}
 				}),
-				crate_05: b({
+				crate_05: y({
 					collision: D.createAabbExtents(L.create(0, 0), L.create(2, 2)),
 					destructible: !1,
 					hitParticle: "goldChip",
@@ -7572,7 +7572,7 @@ webpackJsonp([0], {
 						punch: "wall_brick_bullet"
 					}
 				}),
-				crate_06: b({
+				crate_06: y({
 					collision: D.createAabbExtents(L.create(0, 0), L.create(2.25, 1.1)),
 					destructible: !1,
 					hitParticle: "greenChip",
@@ -7588,7 +7588,7 @@ webpackJsonp([0], {
 						punch: "ammo_crate_bullet"
 					}
 				}),
-				crate_07: b({
+				crate_07: y({
 					health: 140,
 					loot: [r("tier_surviv", 2, 3), s("ak47", 1), s("outfitKhaki", 1), s("outfitKhaki", 1), s("outfitKhaki", 1), s("outfitKhaki", 1)],
 					img: {
@@ -7598,7 +7598,7 @@ webpackJsonp([0], {
 						explode: "crate_break_01"
 					}
 				}),
-				crate_08: b({
+				crate_08: y({
 					health: 140,
 					loot: [r("tier_surviv", 2, 3)],
 					map: {
@@ -7615,7 +7615,7 @@ webpackJsonp([0], {
 						explode: "crate_break_01"
 					}
 				}),
-				crate_09: b({
+				crate_09: y({
 					health: 140,
 					loot: [r("tier_chest", 2, 2), r("tier_conch", 1, 1)],
 					map: {
@@ -13927,27 +13927,27 @@ webpackJsonp([0], {
 					material: "metal",
 					extents: L.create(.4, 6)
 				}),
-				container_01: y({
+				container_01: b({
 					open: !1,
 					tint: 2703694,
 					ceilingSprite: ""
 				}),
-				container_02: y({
+				container_02: b({
 					open: !1,
 					tint: 2703694,
 					ceilingSprite: ""
 				}),
-				container_03: y({
+				container_03: b({
 					open: !1,
 					tint: 2703694,
 					ceilingSprite: ""
 				}),
-				container_04: y({
+				container_04: b({
 					open: !0,
 					tint: 3560807,
 					ceilingSprite: ""
 				}),
-				container_06: y({
+				container_06: b({
 					open: !1,
 					tint: 12227840,
 					ceilingSprite: "",
@@ -14533,8 +14533,8 @@ webpackJsonp([0], {
 							h = this.exploded,
 							g = this.isNew,
 							f = this.pos,
-							y = this.explodeParticle,
-							b = this.sound;
+							b = this.explodeParticle,
+							y = this.sound;
 						if (this.isButton) {
 							var x = this.button;
 							if (x.seq != x.seqOld) {
@@ -14584,10 +14584,10 @@ webpackJsonp([0], {
 						if (p && !h && (t.deadObstacleIds.push(this.__id), this.exploded = !0, this.smokeEmitter && (this.smokeEmitter.stop(), this.smokeEmitter = null), !g)) {
 							for (var L = r.toAabb(this.collider), E = d.mul(d.sub(L.max, L.min), .5), B = d.add(L.min, E), F = Math.floor(c.random(5, 11)), R = 0; R < F; R++) {
 								var j = d.mul(d.randomUnit(), c.random(5, 15)),
-									N = Array.isArray(y) ? y[Math.floor(Math.random() * y.length)] : y;
+									N = Array.isArray(b) ? b[Math.floor(Math.random() * b.length)] : b;
 								a.addParticle(m.Defs[N], this.layer, B, j)
 							}
-							i.playSound(b.explode, {
+							i.playSound(y.explode, {
 								channel: "sfx",
 								soundPos: B,
 								layer: this.layer,
@@ -15766,7 +15766,7 @@ webpackJsonp([0], {
 					}
 				}
 			},
-			y = {
+			b = {
 				smoke_barrel: {
 					particle: "explosionSmoke",
 					rate: new i(.2, .3),
@@ -15819,7 +15819,7 @@ webpackJsonp([0], {
 					if (i.active && i.enabled) {
 						i.ticker;
 						i.ticker += e, i.nextSpawn -= e;
-						for (var n = y[i.type]; i.nextSpawn <= 0 && i.spawnCount < n.maxCount;) {
+						for (var n = b[i.type]; i.nextSpawn <= 0 && i.spawnCount < n.maxCount;) {
 							var r = i.scale * n.radius,
 								s = u.add(i.pos, u.mul(u.randomUnit(), Math.random() * r)),
 								l = u.rotate(i.dir, (Math.random() - .5) * n.angle),
@@ -15836,10 +15836,10 @@ webpackJsonp([0], {
 					if (h.active) {
 						h.vel = u.mul(h.vel, 1 / (1 + e * h.drag)), h.pos = u.add(h.pos, u.mul(h.vel, e)), h.rotVel *= 1 / (1 + e * h.rotDrag), h.rot += h.rotVel * e, h.ticker += e;
 						var g = Math.min(h.ticker / h.life, 1),
-							b = h.hasParent ? h.pos : t.pointToScreen(h.pos),
+							y = h.hasParent ? h.pos : t.pointToScreen(h.pos),
 							x = m.remap(g, h.def.scale.lerp.min, h.def.scale.lerp.max, h.scaleStart, h.scaleEnd),
 							v = m.remap(g, h.def.alpha.lerp.min, h.def.alpha.lerp.max, h.alphaStart, h.alphaEnd);
-						h.hasParent || (x = t.pixels(x)), h.sprite.position.set(b.x, b.y), h.sprite.scale.set(x, x), h.sprite.rotation = h.rot, h.sprite.alpha = v, g >= 1 && h.free()
+						h.hasParent || (x = t.pixels(x)), h.sprite.position.set(y.x, y.y), h.sprite.scale.set(x, x), h.sprite.rotation = h.rot, h.sprite.alpha = v, g >= 1 && h.free()
 					}
 				}
 			}
@@ -16172,13 +16172,13 @@ webpackJsonp([0], {
 							var g = r[h];
 							if (l.hasOwnProperty(g)) {
 								var f = l[g],
-									y = f.noCustom || !1;
-								if (!f.teamOnly && !y) {
-									var b = !1,
+									b = f.noCustom || !1;
+								if (!f.teamOnly && !b) {
+									var y = !1,
 										x = "";
-									f.twitterFollow && (b = !0, x = "twitter"), f.youtubeSubscribe && (b = !0, x = "youtube"), f.facebookLike && (b = !0, x = "facebook"), f.accountLogin && (b = !0, x = "account");
+									f.twitterFollow && (y = !0, x = "twitter"), f.youtubeSubscribe && (y = !0, x = "youtube"), f.facebookLike && (y = !0, x = "facebook"), f.accountLogin && (y = !0, x = "account");
 									var v = "customize-list-item";
-									v += b ? " customize-list-item-locked" : " customize-list-item-unlocked";
+									v += y ? " customize-list-item-locked" : " customize-list-item-unlocked";
 									var k = n("<div/>", {
 										class: v,
 										"data-lock-reason": x
@@ -16186,14 +16186,14 @@ webpackJsonp([0], {
 									k.append(n("<div/>", {
 										class: "customize-emote-image",
 										style: "background-image: url(" + f.texture + ")",
-										draggable: !b,
+										draggable: !y,
 										"data-id": g
 									})), n("#modal-customize-list").append(k), v = "customize-list-item customize-list-item-unlocked", k = n("<div/>", {
 										class: v
 									}), k.append(n("<div/>", {
 										class: "customize-emote-image",
 										style: "background-image: url(" + f.texture + ")",
-										draggable: !b,
+										draggable: !y,
 										"data-id": g
 									})), n("#modal-account-avatar-list").append(k)
 								}
@@ -16516,11 +16516,11 @@ webpackJsonp([0], {
 			return window.innerWidth > window.innerHeight || 90 == window.orientation || -90 == window.orientation
 		}
 
-		function y() {
+		function b() {
 			return f() ? "landscape" : "portrait"
 		}
 
-		function b() {
+		function y() {
 			var e = window.innerWidth,
 				t = window.innerHeight;
 			if (u()) {
@@ -16609,9 +16609,9 @@ webpackJsonp([0], {
 			detectiPhoneX: h,
 			detectIE: g,
 			detectMobileSafari: p,
-			getOrientation: y,
+			getOrientation: b,
 			isLandscape: f,
-			getScreenDimensions: b,
+			getScreenDimensions: y,
 			toggleFullScreen: x,
 			logDebug: v,
 			findGame: k,
@@ -16922,10 +16922,10 @@ webpackJsonp([0], {
 				border: new c.Graphics
 			}, this.mapSprite = new c.Sprite(c.Texture.EMPTY), this.mapSprite.anchor = new c.Point(.5, .5), this.container.addChild(this.mapSprite), this.container.addChild(this.display.gas), this.container.addChild(this.display.gasSafeZone), this.container.addChild(this.display.teammates), this.container.addChild(this.display.player), this.container.addChild(this.display.border), this.mapHeight = 0, this.mapWidth = 0, this.bigmapDisplayed = !1, this.screenScaleFactor = 1;
 			var g = (k.getScreenDimensions().width, this.getMinimapMargin()),
-				y = this.getMinimapSize();
-			this.minimapPos = h.create(g + y / 2, e.camera.screenHeight - y / 2 - g), this.playerOuter = c.Sprite.fromImage("img/gui/player-map-outer.svg"), this.playerOuter.anchor = new c.Point(.5, .5), this.playerOuterBaseScale = new c.Point(f.layout == f.Layout.Sm ? .25 : .3, f.layout == f.Layout.Sm ? .25 : .3), this.playerOuter.scale = this.playerOuterBaseScale, this.playerOuter.tint = 16777215, this.player = c.Sprite.fromImage("img/gui/player-map-inner.svg"), this.player.anchor = new c.Point(.5, .5), this.playerBaseScale = new c.Point(f.layout == f.Layout.Sm ? .15 : .2, f.layout == f.Layout.Sm ? .15 : .2), this.player.scale = this.playerBaseScale, this.player.tint = 16777215, this.dead = !1, this.audioManager = t, this.actionSoundInstance = !1, this.muteButton = l("#ui-mute-ingame"), this.muteButtonImage = this.muteButton.find("img"), this.muteOffImg = "img/gui/audio-off.svg", this.muteOnImg = "img/gui/audio-on.svg";
-			var b = this.audioManager.mute;
-			this.muteButtonImage.attr("src", b ? this.muteOffImg : this.muteOnImg), this.muteButton.on("mousedown", function(e) {
+				b = this.getMinimapSize();
+			this.minimapPos = h.create(g + b / 2, e.camera.screenHeight - b / 2 - g), this.playerOuter = c.Sprite.fromImage("img/gui/player-map-outer.svg"), this.playerOuter.anchor = new c.Point(.5, .5), this.playerOuterBaseScale = new c.Point(f.layout == f.Layout.Sm ? .25 : .3, f.layout == f.Layout.Sm ? .25 : .3), this.playerOuter.scale = this.playerOuterBaseScale, this.playerOuter.tint = 16777215, this.player = c.Sprite.fromImage("img/gui/player-map-inner.svg"), this.player.anchor = new c.Point(.5, .5), this.playerBaseScale = new c.Point(f.layout == f.Layout.Sm ? .15 : .2, f.layout == f.Layout.Sm ? .15 : .2), this.player.scale = this.playerBaseScale, this.player.tint = 16777215, this.dead = !1, this.audioManager = t, this.actionSoundInstance = !1, this.muteButton = l("#ui-mute-ingame"), this.muteButtonImage = this.muteButton.find("img"), this.muteOffImg = "img/gui/audio-off.svg", this.muteOnImg = "img/gui/audio-on.svg";
+			var y = this.audioManager.mute;
+			this.muteButtonImage.attr("src", y ? this.muteOffImg : this.muteOnImg), this.muteButton.on("mousedown", function(e) {
 				e.stopPropagation()
 			}), this.muteButton.on("click", function(e) {
 				var t = u.audioManager.muteToggle();
@@ -17052,10 +17052,10 @@ webpackJsonp([0], {
 			h = (a("yp2f"), a("/2+T")),
 			g = a("0od3"),
 			f = (a("Tf6H"), a("K7EQ"), a("zinx")),
-			y = a("85i3"),
-			b = a("p/CU"),
-			x = b.GasRenderer,
-			v = b.GasSafeZoneRenderer,
+			b = a("85i3"),
+			y = a("p/CU"),
+			x = y.GasRenderer,
+			v = y.GasSafeZoneRenderer,
 			k = a("Jr6A"),
 			_ = (a("EZ6M"), a("moUH").Ping),
 			w = a("bkPR");
@@ -17069,7 +17069,7 @@ webpackJsonp([0], {
 			doQuitGame: function() {
 				this.refreshMainPageAds(), this.game.gameOver = !0, this.game.onQuit()
 			},
-			update: function(e, t, a, i, o, n, r, s, l, b) {
+			update: function(e, t, a, i, o, n, r, s, l, y) {
 				var x = this,
 					v = t.netData,
 					k = t.localData,
@@ -17149,7 +17149,7 @@ webpackJsonp([0], {
 						playing: this.game.playingTicker,
 						teamInfo: r.teamInfo
 					};
-					y.logError("badTeamInfo_1: " + JSON.stringify(Y))
+					b.logError("badTeamInfo_1: " + JSON.stringify(Y))
 				}
 				for (var Z = f.layout == f.Layout.Sm, J = X.playerIds.length, Q = 0; Q < J; Q++) {
 					var $ = this.teamSelectors[Q],
@@ -17182,14 +17182,14 @@ webpackJsonp([0], {
 											he = h.normalizeSafe(h.sub(ue, s.pos), h.create(1, 0)),
 											ge = d.intersectRayAabb(s.pos, he, W.min, W.max),
 											fe = Math.atan2(he.y, -he.x) + .5 * Math.PI,
-											ye = s.pointToScreen(ge),
-											be = d.testCircleAabb(ue, m.player.radius, W.min, W.max);
-										if (!ie.dead && !be) {
+											be = s.pointToScreen(ge),
+											ye = d.testCircleAabb(ue, m.player.radius, W.min, W.max);
+										if (!ie.dead && !ye) {
 											var xe = 32,
 												ve = "translate(-50%, -50%) rotate(" + fe + "rad)";
 											Z && (xe = 16, ve += " scale(0.5)"), pe = !1, me.css({
-												left: g.clamp(ye.x, xe, s.screenWidth - xe),
-												top: g.clamp(ye.y, xe, s.screenHeight - xe),
+												left: g.clamp(be.x, xe, s.screenWidth - xe),
+												top: g.clamp(be.y, xe, s.screenHeight - xe),
 												transform: ve
 											}), de.displayed || (me.css("display", "block"), de.displayed = !0)
 										}
@@ -17406,27 +17406,27 @@ webpackJsonp([0], {
 							h = o(p.timeAlive),
 							g = "ui-stats-info-player";
 						g += p.dead ? " ui-stats-info-status" : "";
-						var y = function(e) {
+						var b = function(e) {
 							return l("<div/>", {
 								class: e
 							})
 						}(g);
-						y.css("left", d), y.append(l("<div/>", {
+						b.css("left", d), b.append(l("<div/>", {
 							class: "ui-stats-info-player-name",
 							html: u.name
-						})), y.append(s(this.localization.translate("game-kills"), "" + p.kills)).append(s(this.localization.translate("game-damage-dealt"), p.damageDealt)).append(s(this.localization.translate("game-damage-taken"), p.damageTaken)).append(s(this.localization.translate("game-survived"), h)), this.statsInfoBox.append(y), d += 10
+						})), b.append(s(this.localization.translate("game-kills"), "" + p.kills)).append(s(this.localization.translate("game-damage-dealt"), p.damageDealt)).append(s(this.localization.translate("game-damage-taken"), p.damageTaken)).append(s(this.localization.translate("game-survived"), h)), this.statsInfoBox.append(b), d += 10
 					}
-					var b = l("<a/>", {
+					var y = l("<a/>", {
 						class: "ui-stats-restart btn-green btn-darken menu-option",
 						html: this.localization.translate("game-play-new-game")
 					});
-					if (b.on("click", function() {
+					if (y.on("click", function() {
 							a.doQuitGame()
-						}), this.statsOptions.append(b), e.gameOver || this.waitingForPlayers) b.css({
+						}), this.statsOptions.append(y), e.gameOver || this.waitingForPlayers) y.css({
 						width: f.layout != f.Layout.Sm || f.tablet ? 225 : 130
 					});
 					else {
-						b.css({
+						y.css({
 							left: f.layout != f.Layout.Sm || f.tablet ? -72 : -46
 						});
 						var x = l("<a/>", {
@@ -17940,7 +17940,7 @@ webpackJsonp([0], {
 			h = a("EZ6M"),
 			g = a("xgte"),
 			f = g.RenderType,
-			y = function() {
+			b = function() {
 				function e() {
 					i(this, e), this.sprites = []
 				}
@@ -18005,13 +18005,13 @@ webpackJsonp([0], {
 								fadeAlpha: 1
 							};
 							for (var f = 0; f < n.ceiling.scopeIn.length; f++) this.ceiling.scopeIn.push(l.transform(n.ceiling.scopeIn[f], this.pos, this.rot, this.scale));
-							for (var y = 0; y < n.ceiling.scopeOut.length; y++) this.ceiling.scopeOut.push(l.transform(n.ceiling.scopeOut[y], this.pos, this.rot, this.scale));
+							for (var b = 0; b < n.ceiling.scopeOut.length; b++) this.ceiling.scopeOut.push(l.transform(n.ceiling.scopeOut[b], this.pos, this.rot, this.scale));
 							this.imgs = [];
-							for (var b = 0; b < n.floor.imgs.length; b++) this.imgs.push({
-								sprite: r(n.floor.imgs[b]),
+							for (var y = 0; y < n.floor.imgs.length; y++) this.imgs.push({
+								sprite: r(n.floor.imgs[y]),
 								isCeiling: !1,
 								zOrd: this.zIdx,
-								zIdx: 100 * this.__id + b
+								zIdx: 100 * this.__id + y
 							});
 							for (var x = 0; x < n.ceiling.imgs.length; x++) this.imgs.push({
 								sprite: r(n.ceiling.imgs[x]),
@@ -18041,9 +18041,9 @@ webpackJsonp([0], {
 							}
 						}
 						n.noCeilingRevealTicker > 0 && (p.visionTicker = 0);
-						var y = p.visionTicker > 0,
-							b = o(p.fadeAlpha, y ? 0 : 1, e * (y ? 12 : u.fadeRate));
-						p.fadeAlpha += b;
+						var b = p.visionTicker > 0,
+							y = o(p.fadeAlpha, b ? 0 : 1, e * (b ? 12 : u.fadeRate));
+						p.fadeAlpha += y;
 						for (var x = 0; x < this.imgs.length; x++) {
 							var v = this.imgs[x],
 								k = v.isCeiling ? p.fadeAlpha : 1;
@@ -18066,13 +18066,13 @@ webpackJsonp([0], {
 							h = g > 1e-4 ? m.div(h, g) : m.create(1, 0);
 							var f = n(e, t, h, g, 0);
 							d = m.add(t, m.mul(h, f));
-							var y = l.intersectCircle(o, d, i.dist);
-							if (y) {
-								var b = m.neg(y.dir),
-									x = n(e, d, b, i.dist, .5, a),
-									v = l.intersectSegment(o, d, m.add(d, m.mul(b, i.dist))),
+							var b = l.intersectCircle(o, d, i.dist);
+							if (b) {
+								var y = m.neg(b.dir),
+									x = n(e, d, y, i.dist, .5, a),
+									v = l.intersectSegment(o, d, m.add(d, m.mul(y, i.dist))),
 									k = v && m.length(m.sub(v.point, d)) <= x;
-								if (p.debug && u.addRay(d, b, i.dist, k ? 65280 : 16711680), k) return !0
+								if (p.debug && u.addRay(d, y, i.dist, k ? 65280 : 16711680), k) return !0
 							}
 						}
 						return !1
@@ -18105,7 +18105,7 @@ webpackJsonp([0], {
 					value: function(e) {}
 				}]), e
 			}();
-		e.exports = y
+		e.exports = b
 	},
 	"O/82": function(e, t, a) {
 		"use strict";
@@ -18891,11 +18891,11 @@ webpackJsonp([0], {
 							})
 						}
 					} else {
-						var y = a.volume * s;
-						y = c ? .5 * y : y, i = o.Sound.play(e + t.channel, {
+						var b = a.volume * s;
+						b = c ? .5 * b : b, i = o.Sound.play(e + t.channel, {
 							filter: d,
 							loop: t.loop ? -1 : 0,
-							volume: t.fadeIn || t.startSilent ? 0 : y,
+							volume: t.fadeIn || t.startSilent ? 0 : b,
 							delay: t.delay
 						})
 					}
@@ -19260,9 +19260,9 @@ webpackJsonp([0], {
 			l(".btn-settings").click(function() {
 				return f.finish(), f.css("display", "block"), u.fadeOut(200), g.fadeOut(200), r(), !1
 			});
-			var y = l("#modal-hamburger");
+			var b = l("#modal-hamburger");
 			l("#btn-hamburger").click(function() {
-				return y.finish(), y.css("display", "block"), h.fadeOut(200), r(), !1
+				return b.finish(), b.css("display", "block"), h.fadeOut(200), r(), !1
 			}), l(".account-details-guest, .account-details-user").click(function() {
 				if (c.mobile) {
 					var e = l("#modal-mobile-account");
@@ -19998,9 +19998,9 @@ webpackJsonp([0], {
 					layer: this.layer,
 					muffled: !0
 				})) : this.soundUpdateThrottle -= e, this.ticker += e;
-				var y = Math.min(this.ticker / p.shakeDur, 1),
-					b = r.lerp(y, p.shakeStr, 0);
-				o.addShake(this.pos, b), this.ticker >= this.lifetime && (this.active = !1)
+				var b = Math.min(this.ticker / p.shakeDur, 1),
+					y = r.lerp(b, p.shakeStr, 0);
+				o.addShake(this.pos, y), this.ticker >= this.lifetime && (this.active = !1)
 			}
 		}, o.prototype = {
 			addExplosion: function(e, t, a) {
@@ -20038,10 +20038,10 @@ webpackJsonp([0], {
 				}, f = {
 					x: l,
 					y: t - l
-				}, y = {
+				}, b = {
 					x: e - l,
 					y: t - l
-				}, b = g.x - h.x, x = b / (s + 1), v = [h], k = 1; k <= s; ++k) v.push({
+				}, y = g.x - h.x, x = y / (s + 1), v = [h], k = 1; k <= s; ++k) v.push({
 				x: h.x + x * k,
 				y: h.y + u(-c, c)
 			});
@@ -20050,10 +20050,10 @@ webpackJsonp([0], {
 				x: g.x + u(-c, c),
 				y: g.y + x * _
 			});
-			v.push(y);
+			v.push(b);
 			for (var w = 1; w <= s; ++w) v.push({
-				x: y.x - x * w,
-				y: y.y + u(-c, c)
+				x: b.x - x * w,
+				y: b.y + u(-c, c)
 			});
 			v.push(f);
 			for (var S = 1; S <= s; ++S) v.push({
@@ -20311,8 +20311,8 @@ webpackJsonp([0], {
 							h = this.joiningGame,
 							g = this.siteInfo,
 							f = (this.playerData, this.roomData),
-							y = this.players,
-							b = this.localPlayerIdx,
+							b = this.players,
+							y = this.localPlayerIdx,
 							x = this.isLeader,
 							v = this.audioManager;
 						r("#team-menu").css("display", m ? "block" : "none"), r("#start-menu").css("display", m ? "none" : "block"), r("#news-block").css("display", m ? "none" : "block"), r("#social-share-block").css("display", m ? "none" : "block");
@@ -20330,10 +20330,10 @@ webpackJsonp([0], {
 							}), r(".btn-team-queue").removeClass("btn-hollow-selected");
 							(2 == f.teamMode ? s : l).addClass("btn-hollow-selected"), r(".btn-team-fill").removeClass("btn-hollow-selected");
 							(f.autoFill ? c : d).addClass("btn-hollow-selected"), f.roomUrl && (r("#team-url").html(window.location.origin + "/" + f.roomUrl), r("#team-code").html(f.roomUrl.substring(1)), window.history && window.history.replaceState("", "", f.roomUrl)), t.html(f.findingGame || h ? '<div class="ui-spinner"></div>' : t.attr("data-label")), x ? (i.addClass("btn-darken"), i.removeClass("btn-disabled"), i.removeClass("btn-opaque")) : (i.addClass("btn-disabled"), r(".team-menu-options-buttons .btn-hollow-selected").removeClass("btn-opaque"), r('.team-menu-options-buttons a:not(".btn-hollow-selected")').addClass("btn-opaque"), i.removeClass("btn-darken")), i.prop("disabled", !x), n.prop("disabled", !x), r("#btn-start-team").css("display", x ? "block" : "none");
-							for (var I = !1, z = 0; z < y.length; z++) y[z].isLeader && (I = y[z].inGame);
+							for (var I = !1, z = 0; z < b.length; z++) b[z].isLeader && (I = b[z].inGame);
 							var A = r("#msg-wait-reason");
 							if (A.css("display", x ? "none" : "block"), f.findingGame || h ? A.html('<div class="ui-spinner" style="margin-right:16px"></div>' + e.translate("index-joining-game") + "<span> ...</span>") : I ? A.html(e.translate("index-game-in-progress") + "<span> ...</span>") : A.html(e.translate("index-waiting-for-leader") + "<span> ...</span>"), x) {
-								var D = y.length <= 2;
+								var D = b.length <= 2;
 								D || (s.addClass("btn-disabled btn-opaque"), s.removeClass("btn-darken btn-hollow-selected")), s.prop("disabled", !D)
 							}
 							var O = !0,
@@ -20346,11 +20346,11 @@ webpackJsonp([0], {
 									isLeader: !1,
 									inGame: !1
 								};
-								if (E < y.length) {
-									var F = y[E];
+								if (E < b.length) {
+									var F = b[E];
 									B = {
 										name: F.name,
-										isLocal: E === b,
+										isLocal: E === y,
 										isLeader: F.isLeader,
 										inGame: F.inGame
 									}
@@ -20371,9 +20371,9 @@ webpackJsonp([0], {
 								}))), R.append(r("<div/>", {
 									class: "icon " + (B.inGame ? "icon-in-game" : "")
 								})), L.append(R), B.isLocal && B.inGame && (O = !1)
-							}!document.hasFocus() && this.prevPlayerCount < y.length && y.length > 1 && O && v.playSound("notification_join_01", {
+							}!document.hasFocus() && this.prevPlayerCount < b.length && b.length > 1 && O && v.playSound("notification_join_01", {
 								channel: "ui"
-							}), this.prevPlayerCount = y.length
+							}), this.prevPlayerCount = b.length
 						}
 					}
 				}]), e
@@ -20786,8 +20786,8 @@ webpackJsonp([0], {
 							g = 12;
 						0 == d.layer && 0 == a.layer && p && (u |= 2, g += 100), n.addPIXIObj(d.container, h.DeadBody, u, g, d.__id);
 						var f = o.pointToScreen(d.pos),
-							y = o.pixels(1);
-						d.container.position.set(f.x, f.y), d.container.scale.set(y, y)
+							b = o.pixels(1);
+						d.container.position.set(f.x, f.y), d.container.scale.set(b, b)
 					}
 				}
 			},
@@ -21372,7 +21372,7 @@ webpackJsonp([0], {
 						return !1
 					}
 
-					function y() {
+					function b() {
 						var t = this.setStatus.bind(this),
 							a = this.options.dismissOnTimeout;
 						"number" == typeof a && a >= 0 && (this.dismissTimeout = window.setTimeout(function() {
@@ -21386,7 +21386,7 @@ webpackJsonp([0], {
 							this.onWindowScroll = o, window.addEventListener("scroll", o)
 						}
 					}
-					var b = {
+					var y = {
 						enabled: !0,
 						container: null,
 						cookie: {
@@ -21450,14 +21450,14 @@ webpackJsonp([0], {
 						overrideHTML: null
 					};
 					return i.prototype.initialise = function(e) {
-						this.options && this.destroy(), t.deepExtend(this.options = {}, b), t.isPlainObject(e) && t.deepExtend(this.options, e), r.call(this) && (this.options.enabled = !1), f(this.options.blacklistPage, location.pathname) && (this.options.enabled = !1), f(this.options.whitelistPage, location.pathname) && (this.options.enabled = !0);
+						this.options && this.destroy(), t.deepExtend(this.options = {}, y), t.isPlainObject(e) && t.deepExtend(this.options, e), r.call(this) && (this.options.enabled = !1), f(this.options.blacklistPage, location.pathname) && (this.options.enabled = !1), f(this.options.whitelistPage, location.pathname) && (this.options.enabled = !0);
 						var a = this.options.window.replace("{{classes}}", l.call(this).join(" ")).replace("{{children}}", c.call(this)),
 							i = this.options.overrideHTML;
 						if ("string" == typeof i && i.length && (a = i), this.options.static) {
 							var o = d.call(this, '<div class="cc-grower">' + a + "</div>");
 							o.style.display = "", this.element = o.firstChild, this.element.style.display = "none", t.addClass(this.element, "cc-invisible")
 						} else this.element = d.call(this, a);
-						y.call(this), this.options.autoOpen && this.autoOpen()
+						b.call(this), this.options.autoOpen && this.autoOpen()
 					}, i.prototype.destroy = function() {
 						this.onButtonClick && this.element && (this.element.removeEventListener("click", this.onButtonClick), this.onButtonClick = null), this.dismissTimeout && (clearTimeout(this.dismissTimeout), this.dismissTimeout = null), this.onWindowScroll && (window.removeEventListener("scroll", this.onWindowScroll), this.onWindowScroll = null), this.onMouseMove && (window.removeEventListener("mousemove", this.onMouseMove), this.onMouseMove = null), this.element && this.element.parentNode && this.element.parentNode.removeChild(this.element), this.element = null, this.revokeBtn && this.revokeBtn.parentNode && this.revokeBtn.parentNode.removeChild(this.revokeBtn), this.revokeBtn = null, g(this.options.palette), this.options = null
 					}, i.prototype.open = function(t) {
@@ -23245,8 +23245,8 @@ webpackJsonp([0], {
 			h = a("/2+T"),
 			g = a("K7EQ"),
 			f = a("zinx"),
-			y = a("Jr6A"),
-			b = a("xz3u"),
+			b = a("Jr6A"),
+			y = a("xz3u"),
 			x = a("GtPS"),
 			v = a("ckCa"),
 			k = a("r4ug"),
@@ -23305,7 +23305,7 @@ webpackJsonp([0], {
 			},
 			init: function() {
 				var e, t = this.pixi.renderer.type == n.RENDERER_TYPE.CANVAS;
-				this.input = new C.InputHandler(this.pixi.view), this.touch = new N.Touch(this.input, this.config), this.camera = new x, this.renderer = new F(t), this.particleBarn = new D.ParticleBarn(this.renderer), this.map = new z, this.playerBarn = new L.PlayerBarn, this.bulletBarn = new b.BulletBarn, this.projectileBarn = new E.ProjectileBarn, this.explosionBarn = new S.ExplosionBarn, this.smokeBarn = new j.SmokeBarn, this.deadBodyBarn = new v.DeadBodyBarn, this.decalBarn = new _.DecalBarn, this.lootBarn = new I.LootBarn, this.gas = new P(t), this.pieTimer = new O.PieTimer, this.uiManager = new q.UiManager(this, this.audioManager, this.pieTimer, this.particleBarn, this.localization, t, this.touch), this.ui2Manager = new G.Ui2Manager(this.localization), this.emoteManager = new w.EmoteManager(this, this.audioManager, this.uiManager, this.playerBarn, this.camera, this.map), this.shotBarn = new R.ShotBarn(this.particleBarn, this.audioManager, this.uiManager);
+				this.input = new C.InputHandler(this.pixi.view), this.touch = new N.Touch(this.input, this.config), this.camera = new x, this.renderer = new F(t), this.particleBarn = new D.ParticleBarn(this.renderer), this.map = new z, this.playerBarn = new L.PlayerBarn, this.bulletBarn = new y.BulletBarn, this.projectileBarn = new E.ProjectileBarn, this.explosionBarn = new S.ExplosionBarn, this.smokeBarn = new j.SmokeBarn, this.deadBodyBarn = new v.DeadBodyBarn, this.decalBarn = new _.DecalBarn, this.lootBarn = new I.LootBarn, this.gas = new P(t), this.pieTimer = new O.PieTimer, this.uiManager = new q.UiManager(this, this.audioManager, this.pieTimer, this.particleBarn, this.localization, t, this.touch), this.ui2Manager = new G.Ui2Manager(this.localization), this.emoteManager = new w.EmoteManager(this, this.audioManager, this.uiManager, this.playerBarn, this.camera, this.map), this.shotBarn = new R.ShotBarn(this.particleBarn, this.audioManager, this.uiManager);
 				var a = (e = {}, i(e, s.Type.Player, this.playerBarn.playerPool), i(e, s.Type.Obstacle, this.map.obstaclePool), i(e, s.Type.Loot, this.lootBarn.lootPool), i(e, s.Type.LootSpawner, this.map.lootSpawnerPool), i(e, s.Type.DeadBody, this.deadBodyBarn.deadBodyPool), i(e, s.Type.Building, this.map.buildingPool), i(e, s.Type.Structure, this.map.structurePool), i(e, s.Type.Decal, this.decalBarn.decalPool), i(e, s.Type.Projectile, this.projectileBarn.projectilePool), i(e, s.Type.Smoke, this.smokeBarn.smokePool), e);
 				this.objectCreator = new A.Creator;
 				for (var o in a) a.hasOwnProperty(o) && this.objectCreator.registerType(o, a[o]);
@@ -23326,8 +23326,8 @@ webpackJsonp([0], {
 				this.emoteLoadout = [], this.emoteLoadout[c.None] = 0;
 				for (var h = Object.keys(m), g = 0; g < h.length; g++) {
 					var f = h[g],
-						y = parseInt(this.config.get(f)),
-						k = p.clamp(y, 1, 255);
+						b = parseInt(this.config.get(f)),
+						k = p.clamp(b, 1, 255);
 					this.emoteLoadout[m[f]] = k
 				}
 				this.emoteManager.updateEmoteWheel(this.emoteLoadout), void 0 == this.ambientSounds.wavesInst && (this.ambientSounds.wavesInst = this.audioManager.playSound("ambient_waves_01", {
@@ -23353,7 +23353,7 @@ webpackJsonp([0], {
 				return this.initialized && this.playing && !this.spectating && !this.uiManager.displayingStats
 			},
 			update: function(e) {
-				this.playing && (this.playingTicker += e), this.playerBarn.update(e, this.activeId, this.renderer, this.particleBarn, this.camera, this.map, this.input, this.audioManager, this.ambientSounds, this.emoteManager.wheelKeyTriggered, this.gameOver), this.camera.pos = h.copy(this.activePlayer.pos), this.camera.applyShake();
+				this.playing && (this.playingTicker += e), this.playerBarn.update(e, this.activeId, this.renderer, this.particleBarn, this.camera, this.map, this.input, this.audioManager, this.ambientSounds, this.emoteManager.wheelKeyTriggered, this.gameOver, this.spectating), this.camera.pos = h.copy(this.activePlayer.pos), this.camera.applyShake();
 				var t = this.activePlayer.getScopeZoom(),
 					a = p.min(this.camera.screenWidth, this.camera.screenHeight),
 					i = p.max(this.camera.screenWidth, this.camera.screenHeight),
@@ -23367,44 +23367,44 @@ webpackJsonp([0], {
 					d = this.camera.screenToPoint(this.input.mousePos),
 					m = h.sub(d, c),
 					g = h.length(m),
-					y = g > 1e-5 ? h.div(m, g) : h.create(1, 0);
-				this.emoteManager.wheelDisplayed && (g = this.prevMoveMsg.toMouseLen, y = this.prevMoveMsg.toMouseDir);
-				var b = new u.MoveMsg;
-				if (b.seq = this.seq, !this.spectating) {
+					b = g > 1e-5 ? h.div(m, g) : h.create(1, 0);
+				this.emoteManager.wheelDisplayed && (g = this.prevMoveMsg.toMouseLen, b = this.prevMoveMsg.toMouseDir);
+				var y = new u.MoveMsg;
+				if (y.seq = this.seq, !this.spectating) {
 					var x = this.input,
 						v = this.uiManager,
 						k = this.ui2Manager,
 						_ = this.touch.getTouchMovement(this.camera);
 					if (this.touch.moveDetected) {
 						var w = 255 * p.clamp(_.moveLen, 0, 1);
-						b.moveLeft = _.left, b.moveRight = _.right, b.moveUp = _.up, b.moveDown = _.down, b.moveLen = w
-					} else b.moveLeft = this.input.keyDown(C.Key.Left) || this.input.keyDown(C.Key.A), b.moveRight = this.input.keyDown(C.Key.Right) || this.input.keyDown(C.Key.D), b.moveUp = this.input.keyDown(C.Key.Up) || this.input.keyDown(C.Key.W), b.moveDown = this.input.keyDown(C.Key.Down) || this.input.keyDown(C.Key.S), b.moveLen = 255;
+						y.moveLeft = _.left, y.moveRight = _.right, y.moveUp = _.up, y.moveDown = _.down, y.moveLen = w
+					} else y.moveLeft = this.input.keyDown(C.Key.Left) || this.input.keyDown(C.Key.A), y.moveRight = this.input.keyDown(C.Key.Right) || this.input.keyDown(C.Key.D), y.moveUp = this.input.keyDown(C.Key.Up) || this.input.keyDown(C.Key.W), y.moveDown = this.input.keyDown(C.Key.Down) || this.input.keyDown(C.Key.S), y.moveLen = 255;
 					if (f.touch) {
 						var S = this.activePlayer.localData.curWeapIdx == r.WeaponSlot.Throwable,
 							M = this.touch.getAimMovement(S, this.camera);
-						b.toMouseDir = M.toAimDir;
+						y.toMouseDir = M.toAimDir;
 						var T = M.toAimLen / 10;
-						b.toMouseLen = Math.min(T, u.kMouseMaxLen)
-					} else b.toMouseDir = h.copy(y), b.toMouseLen = Math.min(g, u.kMouseMaxLen);
-					b.shootStart = x.mousePressed() || this.touch.shotDetected, b.shootHold = x.mouseDown() || this.touch.shotDetected, b.reload = x.keyPressed(C.Key.R) || v.reloadTouched, b.interaction = x.keyPressed(C.Key.F) || v.interactionTouched, b.cancelAction = x.keyPressed(C.Key.X) || v.interactionTouched, b.equipPrimary = x.keyPressed(C.Key.One) || 0 == k.switchWeaponIdx, b.equipSecondary = x.keyPressed(C.Key.Two) || 1 == k.switchWeaponIdx, b.equipThrowable = x.keyPressed(C.Key.Four) || 3 == k.switchWeaponIdx, b.equipMelee = x.keyPressed(C.Key.Three) || x.keyPressed(C.Key.E) || 2 == k.switchWeaponIdx, b.equipLast = x.keyPressed(C.Key.Q), b.scrollDown = x.mouseWheel() > 0, b.scrollUp = x.mouseWheel() < 0, b.portrait = this.camera.screenWidth < this.camera.screenHeight;
+						y.toMouseLen = Math.min(T, u.kMouseMaxLen)
+					} else y.toMouseDir = h.copy(b), y.toMouseLen = Math.min(g, u.kMouseMaxLen);
+					y.shootStart = x.mousePressed() || this.touch.shotDetected, y.shootHold = x.mouseDown() || this.touch.shotDetected, y.reload = x.keyPressed(C.Key.R) || v.reloadTouched, y.interaction = x.keyPressed(C.Key.F) || v.interactionTouched, y.cancelAction = x.keyPressed(C.Key.X) || v.interactionTouched, y.equipPrimary = x.keyPressed(C.Key.One) || 0 == k.switchWeaponIdx, y.equipSecondary = x.keyPressed(C.Key.Two) || 1 == k.switchWeaponIdx, y.equipThrowable = x.keyPressed(C.Key.Four) || 3 == k.switchWeaponIdx, y.equipMelee = x.keyPressed(C.Key.Three) || x.keyPressed(C.Key.E) || 2 == k.switchWeaponIdx, y.equipLast = x.keyPressed(C.Key.Q), y.scrollDown = x.mouseWheel() > 0, y.scrollUp = x.mouseWheel() < 0, y.portrait = this.camera.screenWidth < this.camera.screenHeight;
 					for (var P = 0; P < k.uiEvents.length; P++) {
 						var I = k.uiEvents[P];
 						if ("use" == I.action)
 							if ("weapon" == I.type) switch (I.data) {
 								case 0:
-									b.equipPrimary = !0;
+									y.equipPrimary = !0;
 									break;
 								case 1:
-									b.equipSecondary = !0;
+									y.equipSecondary = !0;
 									break;
 								case 2:
-									b.equipMelee = !0;
+									y.equipMelee = !0;
 									break;
 								case 3:
-									b.equipThrowable = !0
-							} else "scope" == I.type ? b.useScope = I.data : b.useItem = I.data
+									y.equipThrowable = !0
+							} else "scope" == I.type ? y.useScope = I.data : y.useItem = I.data
 					}
-					"" === b.useItem && (b.useItem = x.keyPressed(C.Key.Seven) ? "bandage" : x.keyPressed(C.Key.Eight) ? "healthkit" : x.keyPressed(C.Key.Nine) ? "soda" : x.keyPressed(C.Key.Zero) ? "painkiller" : "");
+					"" === y.useItem && (y.useItem = x.keyPressed(C.Key.Seven) ? "bandage" : x.keyPressed(C.Key.Eight) ? "healthkit" : x.keyPressed(C.Key.Nine) ? "soda" : x.keyPressed(C.Key.Zero) ? "painkiller" : "");
 					for (var z = !1, A = 0; A < k.uiEvents.length; A++) {
 						var D = k.uiEvents[A];
 						if ("drop" == D.action) {
@@ -23432,16 +23432,16 @@ webpackJsonp([0], {
 				}
 				this.uiManager.beginSpectating = !1, this.uiManager.specNext = !1, this.uiManager.specPrev = !1, this.uiManager.reloadTouched = !1, this.uiManager.interactionTouched = !1;
 				var j = !1;
-				for (var N in b)
-					if (b.hasOwnProperty(N)) {
+				for (var N in y)
+					if (y.hasOwnProperty(N)) {
 						if ("toMouseDir" == N) {
-							var q = p.clamp(h.dot(b[N], this.prevMoveMsg[N]), -1, 1),
+							var q = p.clamp(h.dot(y[N], this.prevMoveMsg[N]), -1, 1),
 								G = p.rad2deg(Math.acos(q));
 							j = G > .4
-						} else "toMouseLen" == N ? j = Math.abs(this.prevMoveMsg[N] - b[N]) > .5 : "shootStart" == N ? j = b[N] || b[N] != this.prevMoveMsg[N] : this.prevMoveMsg[N] != b[N] && (j = !0);
+						} else "toMouseLen" == N ? j = Math.abs(this.prevMoveMsg[N] - y[N]) > .5 : "shootStart" == N ? j = y[N] || y[N] != this.prevMoveMsg[N] : this.prevMoveMsg[N] != y[N] && (j = !0);
 						if (j) break
 					}
-				this.moveMsgTimeout -= e, (j || this.moveMsgTimeout < 0) && (this.seqInFlight || (this.seq = (this.seq + 1) % 256, this.seqSendTime = (new Date).getTime(), this.seqInFlight = !0, b.seq = this.seq), this.sendMessage(u.Msg.Move, b), this.moveMsgTimeout = 1, this.prevMoveMsg = b), this.ui2Manager.flushInput(), this.map.update(e, this.activePlayer, this.particleBarn, this.audioManager, this.renderer, this.camera), this.lootBarn.update(e, this.activePlayer, this.camera), this.bulletBarn.update(e, this.playerBarn, this.map, this.camera, this.activePlayer, this.renderer, this.particleBarn, this.audioManager), this.projectileBarn.update(e, this.particleBarn, this.audioManager, this.activePlayer, this.map, this.renderer, this.camera), this.explosionBarn.update(e, this.map, this.camera, this.particleBarn, this.audioManager), this.smokeBarn.update(e, this.camera, this.activePlayer, this.map, this.renderer), this.shotBarn.update(e, this.activeId, this.playerBarn, this.particleBarn, this.audioManager), this.particleBarn.update(e, this.camera), this.deadBodyBarn.update(e, this.playerBarn, this.activePlayer, this.map, this.camera, this.renderer), this.decalBarn.update(e, this.map, this.camera), this.pieTimer.update(e, this.activePlayer, this.camera), this.uiManager.update(e, this.activePlayer, this.activeId == this.localId, this.map, this.gas, this.lootBarn, this.playerBarn, this.camera, this.teamMode, this.input), this.ui2Manager.update(e, this.activePlayer, this.spectating, this.playerBarn, this.lootBarn, this.map), this.emoteManager.update(e, this.localId, this.activePlayer, this.input.mousePos, this.teamMode, this.deadBodyBarn, this.renderer), this.touch.updateDisplay(), this.renderer.update(e, this.camera, this.map);
+				this.moveMsgTimeout -= e, (j || this.moveMsgTimeout < 0) && (this.seqInFlight || (this.seq = (this.seq + 1) % 256, this.seqSendTime = (new Date).getTime(), this.seqInFlight = !0, y.seq = this.seq), this.sendMessage(u.Msg.Move, y), this.moveMsgTimeout = 1, this.prevMoveMsg = y), this.ui2Manager.flushInput(), this.map.update(e, this.activePlayer, this.particleBarn, this.audioManager, this.renderer, this.camera), this.lootBarn.update(e, this.activePlayer, this.camera), this.bulletBarn.update(e, this.playerBarn, this.map, this.camera, this.activePlayer, this.renderer, this.particleBarn, this.audioManager), this.projectileBarn.update(e, this.particleBarn, this.audioManager, this.activePlayer, this.map, this.renderer, this.camera), this.explosionBarn.update(e, this.map, this.camera, this.particleBarn, this.audioManager), this.smokeBarn.update(e, this.camera, this.activePlayer, this.map, this.renderer), this.shotBarn.update(e, this.activeId, this.playerBarn, this.particleBarn, this.audioManager), this.particleBarn.update(e, this.camera), this.deadBodyBarn.update(e, this.playerBarn, this.activePlayer, this.map, this.camera, this.renderer), this.decalBarn.update(e, this.map, this.camera), this.pieTimer.update(e, this.activePlayer, this.camera), this.uiManager.update(e, this.activePlayer, this.activeId == this.localId, this.map, this.gas, this.lootBarn, this.playerBarn, this.camera, this.teamMode, this.input), this.ui2Manager.update(e, this.activePlayer, this.spectating, this.playerBarn, this.lootBarn, this.map), this.emoteManager.update(e, this.localId, this.activePlayer, this.input.mousePos, this.teamMode, this.deadBodyBarn, this.renderer), this.touch.updateDisplay(), this.renderer.update(e, this.camera, this.map);
 				for (var U = 0; U < this.emoteManager.newPings.length; U++) {
 					var V = this.emoteManager.newPings[U],
 						H = new u.EmoteMsg;
@@ -23459,9 +23459,9 @@ webpackJsonp([0], {
 				this.pixi.renderer.backgroundColor = g.background, this.playerBarn.render(this.camera), this.bulletBarn.render(this.camera), this.map.render(this.camera), this.gas.render(this.camera), this.uiManager.render(this.activePlayer.pos, this.gas, this.camera, this.map), this.emoteManager.render(this.camera), this.pieTimer.render(this.camera), k.flush()
 			},
 			resize: function() {
-				var e = y.getScreenDimensions(),
+				var e = b.getScreenDimensions(),
 					t = e.width;
-				y.isLandscape() || (t = e.height), f.layout = t <= 850 || f.mobile ? f.Layout.Sm : f.Layout.Lg, this.camera.screenWidth = e.width, this.camera.screenHeight = e.height, this.map.resize(this.pixi.renderer), this.gas.resize(), this.uiManager.resize(this.camera), this.touch.resize(), this.renderer.resize(this.camera)
+				b.isLandscape() || (t = e.height), f.layout = t <= 850 || f.mobile ? f.Layout.Sm : f.Layout.Lg, this.camera.screenWidth = e.width, this.camera.screenHeight = e.height, this.map.resize(this.pixi.renderer), this.gas.resize(), this.uiManager.resize(this.camera), this.touch.resize(), this.renderer.resize(this.camera)
 			},
 			processGameUpdate: function(e) {
 				for (var t = {
@@ -23496,8 +23496,8 @@ webpackJsonp([0], {
 					this.explosionBarn.addExplosion(g.type, g.pos, g.layer)
 				}
 				for (var f = 0; f < e.emotes.length; f++) {
-					var y = e.emotes[f];
-					y.isPing ? this.emoteManager.addPing(y) : this.emoteManager.addEmote(y)
+					var b = e.emotes[f];
+					b.isPing ? this.emoteManager.addPing(b) : this.emoteManager.addEmote(b)
 				}
 			},
 			onMessage: function(e, t) {
@@ -23550,9 +23550,9 @@ webpackJsonp([0], {
 						}, h, this.spectating);
 						var g = c.downed && !c.killed || c.damageType == r.DamageType.Gas || c.damageType == r.DamageType.Bleeding ? m : this.playerBarn.getPlayerInfo(c.killerId),
 							f = this.playerBarn.getPlayerInfo(this.activeId).teamId,
-							y = this.ui2Manager.getKillFeedText(d.nameKillFeed, g.nameKillFeed, h, c.damageType, c.downed && !c.killed),
-							b = this.ui2Manager.getKillFeedColor(f, d.teamId, m.teamId);
-						this.ui2Manager.addKillFeed(y, b), c.type == r.DamageType.Player && this.bulletBarn.createBulletHit(this.playerBarn, c.targetId, this.audioManager);
+							b = this.ui2Manager.getKillFeedText(d.nameKillFeed, g.nameKillFeed, h, c.damageType, c.downed && !c.killed),
+							y = this.ui2Manager.getKillFeedColor(f, d.teamId, m.teamId);
+						this.ui2Manager.addKillFeed(b, y), c.type == r.DamageType.Player && this.bulletBarn.createBulletHit(this.playerBarn, c.targetId, this.audioManager);
 						break;
 					case u.Msg.PlayerStats:
 						var x = new u.PlayerStatsMsg;
@@ -23620,8 +23620,8 @@ webpackJsonp([0], {
 				}
 			for (var g in D.Defs)
 				if (D.Defs.hasOwnProperty(g) && void 0 !== D.Defs[g].image)
-					for (var f = D.Defs[g].image, y = 0; y < f.length; y++) a(f[y]);
-			for (var b in d) d.hasOwnProperty(b) && void 0 !== d[b].texture && a(d[b].texture);
+					for (var f = D.Defs[g].image, b = 0; b < f.length; b++) a(f[b]);
+			for (var y in d) d.hasOwnProperty(y) && void 0 !== d[y].texture && a(d[y].texture);
 			var x = Math.max(window.screen.width, window.screen.height),
 				v = Math.min(window.screen.width, window.screen.height);
 			x *= window.devicePixelRatio, v *= window.devicePixelRatio;
@@ -24084,9 +24084,9 @@ webpackJsonp([0], {
 						d.ticker += e;
 						var g = s.delerp(d.ticker, 0, 1),
 							f = s.easeOutElastic(g, .75),
-							y = a.pointToScreen(d.pos),
-							b = a.pixels(d.imgScale * f);
-						d.container.position.set(y.x, y.y), d.container.scale.set(b, b)
+							b = a.pointToScreen(d.pos),
+							y = a.pixels(d.imgScale * f);
+						d.container.position.set(b.x, b.y), d.container.scale.set(y, y)
 					}
 				}
 			},
@@ -24135,7 +24135,7 @@ webpackJsonp([0], {
 			for (var r = i, s = g.add(t, g.mul(a, i)), l = e.obstaclePool.getPool(), c = 0; c < l.length; c++) {
 				var d = l[c];
 				if (!(!d.active || d.dead || !d.collidable || d.isWindow || d.height < o) && h.sameLayer(d.layer, n)) {
-					var m = b.intersectSegment(d.collider, t, s);
+					var m = y.intersectSegment(d.collider, t, s);
 					m && (r = Math.min(r, g.length(g.sub(m.point, t))))
 				}
 			}
@@ -24161,8 +24161,8 @@ webpackJsonp([0], {
 			h = a("Tf6H"),
 			g = a("/2+T"),
 			f = a("0od3"),
-			y = a("8iex"),
-			b = a("9xSA"),
+			b = a("8iex"),
+			y = a("9xSA"),
 			x = a("K7EQ"),
 			v = a("qwV+"),
 			k = a("85i3"),
@@ -24329,15 +24329,15 @@ webpackJsonp([0], {
 							u = n[l].handLt,
 							h = n[l].handRt;
 						if (this.handLt = f.v2lerp(c, d, u), this.handRt = f.v2lerp(c, p, h), a.mirror && this.anim.mirror) {
-							var y = g.copy(this.handLt);
-							this.handLt = g.copy(this.handRt), this.handRt = g.copy(y), this.handLt.x *= -1, this.handRt.x *= -1
+							var b = g.copy(this.handLt);
+							this.handLt = g.copy(this.handRt), this.handRt = g.copy(b), this.handLt.x *= -1, this.handRt.x *= -1
 						}
 						if (a.feet) {
-							var b = s >= 0 ? n[s].footLt : this.anim.startFootLt,
+							var y = s >= 0 ? n[s].footLt : this.anim.startFootLt,
 								x = s >= 0 ? n[s].footRt : this.anim.startFootRt,
 								k = n[l].footLt,
 								_ = n[l].footRt;
-							if (this.footLt = f.v2lerp(c, b, k), this.footRt = f.v2lerp(c, x, _), a.mirror && this.anim.mirror) {
+							if (this.footLt = f.v2lerp(c, y, k), this.footRt = f.v2lerp(c, x, _), a.mirror && this.anim.mirror) {
 								var w = g.copy(this.footLt);
 								this.footLt = g.copy(this.footRt), this.footRt = g.copy(w), this.footLt.x *= -1, this.footRt.x *= -1
 							}
@@ -24389,7 +24389,7 @@ webpackJsonp([0], {
 						for (var t = c.items[this.netData.curWeapType], a = g.add(this.pos, g.mul(this.dir, t.rangeMult)), i = t.areaOfEffect, o = [], n = null, r = null, s = 0, l = e.map.obstaclePool.getPool(), d = 0; d < l.length; d++) {
 							var m = l[d];
 							if (!(!m.active || m.dead || m.height < c.player.meleeHeight) && h.sameLayer(m.layer, 1 & this.layer)) {
-								var p = b.intersectCircle(m.collider, a, i);
+								var p = y.intersectCircle(m.collider, a, i);
 								p && p.pen > s && (n = m, r = p, s = p.pen)
 							}
 						}
@@ -24407,7 +24407,7 @@ webpackJsonp([0], {
 						for (var x = e.playerBarn.playerPool.getPool(), v = 0; v < x.length; v++) {
 							var k = x[v];
 							if (k.active && k.__id != this.__id && !k.netData.dead && h.sameLayer(k.layer, this.layer)) {
-								if (y.testCircleCircle(g.add(this.pos, g.mul(this.dir, t.rangeMult)), t.areaOfEffect, k.pos, c.player.radius)) {
+								if (b.testCircleCircle(g.add(this.pos, g.mul(this.dir, t.rangeMult)), t.areaOfEffect, k.pos, c.player.radius)) {
 									var _ = g.mul(this.dir, 1);
 									_ = g.rotate(_, (Math.random() - .5) * Math.PI / 3), o.push({
 										pos: k.pos,
@@ -24452,237 +24452,237 @@ webpackJsonp([0], {
 				}
 				return s(e, [{
 					key: "update",
-					value: function(e, t, a, i, o, n, s, l, f, y, x) {
-						for (var _ = {
+					value: function(e, t, a, i, o, n, s, l, f, b, x, _) {
+						for (var w = {
 								playerBarn: this,
 								map: n,
 								audioManager: l,
 								particleBarn: i
-							}, w = this.playerPool.getPool(), S = 0; S < w.length; S++) {
-							var T = w[S];
-							if (T.active) {
-								var C = T.__id == t;
-								if (C) {
-									var I = this.playerPool.getPool()[0];
-									I.sentinel && (I.pos = g.add(T.netData.pos, g.create(4, 3)), I.netData.pos = g.copy(I.pos))
+							}, S = this.playerPool.getPool(), T = 0; T < S.length; T++) {
+							var C = S[T];
+							if (C.active) {
+								var I = C.__id == t;
+								if (I) {
+									var z = this.playerPool.getPool()[0];
+									z.sentinel && (z.pos = g.add(C.netData.pos, g.create(4, 3)), z.netData.pos = g.copy(z.pos))
 								}
-								var z = T.pos;
-								T.pos = g.copy(T.netData.pos), T.dir = g.copy(T.netData.dir), T.layer = T.netData.layer, T.lastThrowablePickupSfxTicker -= e;
-								var A = this.playerInfo[t].teamId,
-									D = this.playerInfo[T.__id].teamId == A;
-								if (T.isNew) {
-									var O = this.getPlayerInfo(T.__id);
-									T.nameText.text = O.nameUnEntity, T.nameText.visible = !C && D
+								var A = C.pos;
+								C.pos = g.copy(C.netData.pos), C.dir = g.copy(C.netData.dir), C.layer = C.netData.layer, C.lastThrowablePickupSfxTicker -= e;
+								var D = this.playerInfo[t].teamId,
+									O = this.playerInfo[C.__id].teamId == D;
+								if (C.isNew) {
+									var L = this.getPlayerInfo(C.__id);
+									C.nameText.text = L.nameUnEntity, C.nameText.visible = !I && O
 								}
-								for (var L = this.getPlayerById(t), E = null, B = null, F = n.obstaclePool.getPool(), R = 0; R < F.length; R++) {
-									var j = F[R];
-									if (j.active && !j.dead && j.layer == T.netData.layer)
-										if (j.isBush) {
-											var N = .25 * c.player.radius;
-											b.intersectCircle(j.collider, T.pos, N) && (E = j)
-										} else if (j.isDoor && !j.door.open && j.door.playErrorFx) {
-										var q = c.player.radius + .25,
-											G = g.rotate(g.create(1, 0), j.rot),
-											U = g.sub(j.pos, T.pos);
-										g.dot(U, G) < 0 && b.intersectCircle(j.collider, T.pos, q) && (B = j)
+								for (var E = this.getPlayerById(t), B = null, F = null, R = n.obstaclePool.getPool(), j = 0; j < R.length; j++) {
+									var N = R[j];
+									if (N.active && !N.dead && N.layer == C.netData.layer)
+										if (N.isBush) {
+											var q = .25 * c.player.radius;
+											y.intersectCircle(N.collider, C.pos, q) && (B = N)
+										} else if (N.isDoor && !N.door.open && N.door.playErrorFx) {
+										var G = c.player.radius + .25,
+											U = g.rotate(g.create(1, 0), N.rot),
+											V = g.sub(N.pos, C.pos);
+										g.dot(V, U) < 0 && y.intersectCircle(N.collider, C.pos, G) && (F = N)
 									}
 								}
-								var V = null != E;
-								if (V && (T.insideObstacleType = E.type), T.lastInsideObstacleTime -= e, T.wasInsideObstacle != V && T.lastInsideObstacleTime < 0 && !T.isNew) {
-									var H = p.Defs[T.insideObstacleType];
-									T.lastInsideObstacleTime = .2, l.playSound(H.sound.enter, {
+								var H = null != B;
+								if (H && (C.insideObstacleType = B.type), C.lastInsideObstacleTime -= e, C.wasInsideObstacle != H && C.lastInsideObstacleTime < 0 && !C.isNew) {
+									var W = p.Defs[C.insideObstacleType];
+									C.lastInsideObstacleTime = .2, l.playSound(W.sound.enter, {
 										channel: "sfx",
-										soundPos: T.pos,
+										soundPos: C.pos,
 										falloff: 1,
-										layer: T.layer,
+										layer: C.layer,
 										muffled: !0
 									});
-									for (var W = g.normalizeSafe(g.sub(z, T.pos), g.create(1, 0)), K = V ? 1 : -1, X = Math.floor(h.random(3, 5)), Y = 0; Y < X; Y++) {
-										var Z = g.mul(g.rotate(g.mul(W, K), (Math.random() - .5) * Math.PI / 1.5), h.random(6, 8));
-										i.addParticle(M.Defs[H.hitParticle], T.layer, T.pos, Z)
+									for (var K = g.normalizeSafe(g.sub(A, C.pos), g.create(1, 0)), X = H ? 1 : -1, Y = Math.floor(h.random(3, 5)), Z = 0; Z < Y; Z++) {
+										var J = g.mul(g.rotate(g.mul(K, X), (Math.random() - .5) * Math.PI / 1.5), h.random(6, 8));
+										i.addParticle(M.Defs[W.hitParticle], C.layer, C.pos, J)
 									}
 								}
-								T.wasInsideObstacle = V;
-								var J = T.isNearDoorError;
-								if (T.isNearDoorError = null != B, T.doorErrorTicker -= e, T.isNearDoorError && !J && T.doorErrorTicker <= 0) {
-									T.doorErrorTicker = .5;
-									var Q = p.Defs[B.type],
-										$ = Q.door.sound.error;
-									l.playSound($, {
+								C.wasInsideObstacle = H;
+								var Q = C.isNearDoorError;
+								if (C.isNearDoorError = null != F, C.doorErrorTicker -= e, C.isNearDoorError && !Q && C.doorErrorTicker <= 0) {
+									C.doorErrorTicker = .5;
+									var $ = p.Defs[F.type],
+										ee = $.door.sound.error;
+									l.playSound(ee, {
 										channel: "sfx",
-										soundPos: T.pos,
+										soundPos: C.pos,
 										falloff: 1,
-										layer: T.layer,
+										layer: C.layer,
 										muffled: !0
 									})
 								}
-								var ee = n.getGroundSurface(T.pos, T.layer);
-								if (C)
-									if (T.soundUpdateThrottle < 0) {
-										T.soundUpdateThrottle = .2;
-										var te = 0,
-											ae = 1;
-										if ("water" !== ee) {
-											var ie = n.distanceToShore(T.pos);
-											ie < 50 && (te = (50 - ie) / 50, ae = 1 - te)
-										} else te = 1, ae = 0;
-										l.setVolume(f.wavesInst, te), l.setVolume(f.windInst, ae)
-									} else T.soundUpdateThrottle -= e;
-								T.isOnBrightSurface = 1 == T.layer && "tile" == ee;
-								var oe = "water" === ee;
-								T.updateSubmersion(e, oe, n), T.stepDistance += g.length(g.sub(z, T.pos)), T.stepDistance > 5 && oe || oe && !T.wasInWater ? (T.stepDistance = 0, n.addRipple(T.pos, 0), _.audioManager.playGroup("footstep_water", {
-									soundPos: T.pos,
+								var te = n.getGroundSurface(C.pos, C.layer);
+								if (I)
+									if (C.soundUpdateThrottle < 0) {
+										C.soundUpdateThrottle = .2;
+										var ae = 0,
+											ie = 1;
+										if ("water" !== te) {
+											var oe = n.distanceToShore(C.pos);
+											oe < 50 && (ae = (50 - oe) / 50, ie = 1 - ae)
+										} else ae = 1, ie = 0;
+										l.setVolume(f.wavesInst, ae), l.setVolume(f.windInst, ie)
+									} else C.soundUpdateThrottle -= e;
+								C.isOnBrightSurface = 1 == C.layer && "tile" == te;
+								var ne = "water" === te;
+								C.updateSubmersion(e, ne, n), C.stepDistance += g.length(g.sub(A, C.pos)), C.stepDistance > 5 && ne || ne && !C.wasInWater ? (C.stepDistance = 0, n.addRipple(C.pos, 0), w.audioManager.playGroup("footstep_water", {
+									soundPos: C.pos,
 									fallOff: 3,
-									layer: T.layer,
+									layer: C.layer,
 									muffled: !0
-								})) : T.stepDistance > 4 && !oe && (T.stepDistance = 0, l.playGroup("footstep_" + ee, {
-									soundPos: T.pos,
+								})) : C.stepDistance > 4 && !ne && (C.stepDistance = 0, l.playGroup("footstep_" + te, {
+									soundPos: C.pos,
 									fallOff: 3,
-									layer: T.layer,
+									layer: C.layer,
 									muffled: !0
-								})), T.wasInWater = oe, T.netData.dead || T.updateDownedState(e, _, L, x);
-								var ne = T.weapType != T.netData.curWeapType;
-								ne && (T.weapType = T.netData.curWeapType, T.updateWeapon());
-								var re = T.gunContainerL.pivot.y,
-									se = T.gunContainerR.pivot.y;
-								if (re = Math.min(0, re - re * e * 5 + e), se = Math.min(0, se - se * e * 5 + e), T.gunContainerL.pivot.y = re, T.gunContainerR.pivot.y = se, C) {
-									var le = T.localData.curWeapIdx,
-										ce = T.localData.weapons[le],
-										de = c.items[ce.name];
-									if (!T.playedDryFire && "gun" == T.equippedWeaponType() && (s.mousePressed() || s.mouseDown() && "auto" == de.fireMode) && 0 === T.localData.action.type && !y) {
-										var me = T.localData.inventory[de.ammo],
-											pe = ce.ammo;
-										0 === me && 0 === pe && (l.playSound(de.sound.empty), T.playedDryFire = !0)
+								})), C.wasInWater = ne, C.netData.dead || C.updateDownedState(e, w, E, x);
+								var re = C.weapType != C.netData.curWeapType;
+								re && (C.weapType = C.netData.curWeapType, C.updateWeapon());
+								var se = C.gunContainerL.pivot.y,
+									le = C.gunContainerR.pivot.y;
+								if (se = Math.min(0, se - se * e * 5 + e), le = Math.min(0, le - le * e * 5 + e), C.gunContainerL.pivot.y = se, C.gunContainerR.pivot.y = le, I && !_) {
+									var ce = C.localData.curWeapIdx,
+										de = C.localData.weapons[ce],
+										me = c.items[de.name];
+									if (!C.playedDryFire && "gun" == C.equippedWeaponType() && (s.mousePressed() || s.mouseDown() && "auto" == me.fireMode) && 0 === C.localData.action.type && !b) {
+										var pe = C.localData.inventory[me.ammo],
+											ue = de.ammo;
+										0 === pe && 0 === ue && (l.playSound(me.sound.empty), C.playedDryFire = !0)
 									}
-									s.mousePressed() || s.mouseDown() || (T.playedDryFire = !1)
+									s.mousePressed() || s.mouseDown() || (C.playedDryFire = !1)
 								}
-								var ue = T.netData.actionType;
-								if (!C && T.curAction.type != ue) {
+								var he = C.netData.actionType;
+								if (!I && C.curAction.type != he) {
 									l.stopSound(this.actionSoundInstance);
-									var he = null;
-									switch (ue) {
+									var ge = null;
+									switch (he) {
 										case d.Reload:
-											var ge = T.netData.curWeapType;
-											if ("" != ge) {
-												he = c.items[ge].sound.reload
+											var fe = C.netData.curWeapType;
+											if ("" != fe) {
+												ge = c.items[fe].sound.reload
 											}
 									}
-									he && (this.actionSoundInstance = l.playSound(he, {
+									ge && (this.actionSoundInstance = l.playSound(ge, {
 										channel: "otherPlayers",
-										soundPos: T.pos,
+										soundPos: C.pos,
 										fallOff: 2,
-										layer: T.layer,
+										layer: C.layer,
 										muffled: !0
-									})), T.curAction.type = ue
+									})), C.curAction.type = he
 								}
-								if (T.gunSwitchCooldown -= e, C && (ne || T.curWeapIdx != T.localData.curWeapIdx)) {
-									T.curWeapIdx = T.localData.curWeapIdx;
-									var fe = c.items[T.weapType];
-									if ("melee" == fe.type || "throwable" == fe.type)("throwable" != fe.type || T.lastThrowablePickupSfxTicker <= 0) && l.playSound(fe.sound.deploy, {
+								if (C.gunSwitchCooldown -= e, I && (re || C.curWeapIdx != C.localData.curWeapIdx)) {
+									C.curWeapIdx = C.localData.curWeapIdx;
+									var be = c.items[C.weapType];
+									if ("melee" == be.type || "throwable" == be.type)("throwable" != be.type || C.lastThrowablePickupSfxTicker <= 0) && l.playSound(be.sound.deploy, {
 										channel: "sfx",
-										soundPos: T.pos,
+										soundPos: C.pos,
 										fallOff: 3
 									});
-									else if ("gun" == fe.type) {
+									else if ("gun" == be.type) {
 										var ye = "gun_switch_01";
-										T.gunSwitchCooldown > 0 ? ye = fe.sound.deploy : T.gunSwitchCooldown = c.player.freeSwitchCooldown, l.stopLocalActionSound(), l.playSound(ye, {
+										C.gunSwitchCooldown > 0 ? ye = be.sound.deploy : C.gunSwitchCooldown = c.player.freeSwitchCooldown, l.stopLocalActionSound(), l.playSound(ye, {
 											channel: "activePlayer"
 										})
 									}
 								}
-								T.updateAnim(e, _);
-								var be = v[T.anim.type],
-									xe = !be || !be.hideWeapon;
-								(T.netData.downed || T.netData.dead) && (xe = !1), T.gun.visible = !!xe && T.gunVis, T.gunBot.visible = !!xe && T.gunBotVis, T.gunOffhand.visible = !!xe && T.gunOffhandVis, T.gunTop.visible = !!xe && T.gunTopVis, T.hand_left.visible = !xe || T.gunHandLtVis, T.hand_right.visible = !xe || T.gunHandRtVis;
-								var ve = T.anim.type == m.Throw;
-								T.object_right.visible = !(!xe || ve) && T.objRtVis, T.object_left.visible = !!xe && T.objLtVis;
-								var ke = c.items[T.netData.curWeapType].type,
-									_e = T.handLt,
-									we = T.handRt;
-								if (xe && ("gun" == ke ? (_e = T.gunHandLt, we = T.gunHandRt) : T.anim.type == m.None && "throwable" == ke && (_e = T.objHandLt, we = T.objHandRt)), !we) {
-									var Se = {
-										handRt: void 0 !== we ? we : "undefined",
-										gunHandRt: void 0 !== T.gunHandRt ? T.gunHandRt : "undefined",
-										objHandRt: void 0 !== T.objHandRt ? T.objHandRt : "undefined",
-										pHandRt: void 0 !== T.handRt ? T.handRt : "undefined"
+								C.updateAnim(e, w);
+								var xe = v[C.anim.type],
+									ve = !xe || !xe.hideWeapon;
+								(C.netData.downed || C.netData.dead) && (ve = !1), C.gun.visible = !!ve && C.gunVis, C.gunBot.visible = !!ve && C.gunBotVis, C.gunOffhand.visible = !!ve && C.gunOffhandVis, C.gunTop.visible = !!ve && C.gunTopVis, C.hand_left.visible = !ve || C.gunHandLtVis, C.hand_right.visible = !ve || C.gunHandRtVis;
+								var ke = C.anim.type == m.Throw;
+								C.object_right.visible = !(!ve || ke) && C.objRtVis, C.object_left.visible = !!ve && C.objLtVis;
+								var _e = c.items[C.netData.curWeapType].type,
+									we = C.handLt,
+									Se = C.handRt;
+								if (ve && ("gun" == _e ? (we = C.gunHandLt, Se = C.gunHandRt) : C.anim.type == m.None && "throwable" == _e && (we = C.objHandLt, Se = C.objHandRt)), !Se) {
+									var Me = {
+										handRt: void 0 !== Se ? Se : "undefined",
+										gunHandRt: void 0 !== C.gunHandRt ? C.gunHandRt : "undefined",
+										objHandRt: void 0 !== C.objHandRt ? C.objHandRt : "undefined",
+										pHandRt: void 0 !== C.handRt ? C.handRt : "undefined"
 									};
-									k.logError("hand_err: " + JSON.stringify(Se))
+									k.logError("hand_err: " + JSON.stringify(Me))
 								}
-								T.hand_left.pivot.set(_e.x, _e.y), T.hand_right.pivot.set(we.x, we.y), T.foot_left.pivot.set(T.footLt.x, T.footLt.y), T.foot_right.pivot.set(T.footRt.x, T.footRt.y);
-								var Me = Math.atan2(T.dir.x, T.dir.y);
-								T.foot_left.rotation = Me, T.foot_right.rotation = Me, T.gunContainerL.rotation = Me, T.gunContainerR.rotation = Me;
-								var Te = c.items[T.skinType],
-									Pe = "camo" == Te.subtype;
-								T.skinType != T.netData.skin && (T.skinType = T.netData.skin, T.updateSkin());
-								var Ce = T.getBagLevel();
-								if (Ce > 0 && !Pe && !T.downed) {
-									var Ie = (c.items[T.netData.backpack], Ce > 0 ? .03 * Ce + .4 : 0),
-										ze = .5 * T.backpack.width + 8;
-									T.backpack.scale.set(Ie, Ie), T.backpack.pivot.set(T.dir.x * ze, T.dir.y * -ze), T.backpack.visible = !0
-								} else T.backpack.visible = !1;
-								if ("" == T.netData.chest || Pe) T.chest.visible = !1;
+								C.hand_left.pivot.set(we.x, we.y), C.hand_right.pivot.set(Se.x, Se.y), C.foot_left.pivot.set(C.footLt.x, C.footLt.y), C.foot_right.pivot.set(C.footRt.x, C.footRt.y);
+								var Te = Math.atan2(C.dir.x, C.dir.y);
+								C.foot_left.rotation = Te, C.foot_right.rotation = Te, C.gunContainerL.rotation = Te, C.gunContainerR.rotation = Te;
+								var Pe = c.items[C.skinType],
+									Ce = "camo" == Pe.subtype;
+								C.skinType != C.netData.skin && (C.skinType = C.netData.skin, C.updateSkin());
+								var Ie = C.getBagLevel();
+								if (Ie > 0 && !Ce && !C.downed) {
+									var ze = (c.items[C.netData.backpack], Ie > 0 ? .03 * Ie + .4 : 0),
+										Ae = .5 * C.backpack.width + 8;
+									C.backpack.scale.set(ze, ze), C.backpack.pivot.set(C.dir.x * Ae, C.dir.y * -Ae), C.backpack.visible = !0
+								} else C.backpack.visible = !1;
+								if ("" == C.netData.chest || Ce) C.chest.visible = !1;
 								else {
-									var Ae = c.items[T.netData.chest];
-									T.chest.tint = Ae.tint, T.chest.visible = !0
+									var De = c.items[C.netData.chest];
+									C.chest.tint = De.tint, C.chest.visible = !0
 								}
-								if ("" == T.netData.helmet || Pe) T.helmet.visible = !1;
+								if ("" == C.netData.helmet || Ce) C.helmet.visible = !1;
 								else {
-									var De = c.items[T.netData.helmet],
-										Oe = .5 * T.helmet.width,
-										Le = T.downed ? -1 : 1;
-									T.helmet.pivot.set(T.dir.x * Oe * Le, T.dir.y * Oe * -Le), T.helmet.tint = De.tint, T.helmet.visible = !0
+									var Oe = c.items[C.netData.helmet],
+										Le = .5 * C.helmet.width,
+										Ee = C.downed ? -1 : 1;
+									C.helmet.pivot.set(C.dir.x * Le * Ee, C.dir.y * Le * -Ee), C.helmet.tint = Oe.tint, C.helmet.visible = !0
 								}
-								T.noCeilingRevealTicker -= e;
-								for (var Ee = T.layer, Be = b.createCircle(T.pos, c.player.maxVisualRadius), Fe = !1, Re = !1, je = !1, Ne = n.structurePool.getPool(), qe = 0; qe < Ne.length; qe++) {
-									var Ge = Ne[qe];
-									if (Ge.active) {
-										for (var Ue = 0; Ue < Ge.stairs.length; Ue++) {
-											var Ve = Ge.stairs[Ue],
-												He = b.intersect(Ve.collision, Be);
-											if (He) {
-												Re = !0;
-												var We = g.add(Ve.center, g.mul(Ve.downDir, -3)),
-													Ke = g.sub(We, T.pos),
-													Xe = g.length(Ke);
-												Ke = Xe > 1e-4 ? g.div(Ke, Xe) : g.create(1, 0);
-												je = r(n, T.pos, Ke, Xe, .5, T.layer) < Xe
+								C.noCeilingRevealTicker -= e;
+								for (var Be = C.layer, Fe = y.createCircle(C.pos, c.player.maxVisualRadius), Re = !1, je = !1, Ne = !1, qe = n.structurePool.getPool(), Ge = 0; Ge < qe.length; Ge++) {
+									var Ue = qe[Ge];
+									if (Ue.active) {
+										for (var Ve = 0; Ve < Ue.stairs.length; Ve++) {
+											var He = Ue.stairs[Ve],
+												We = y.intersect(He.collision, Fe);
+											if (We) {
+												je = !0;
+												var Ke = g.add(He.center, g.mul(He.downDir, -3)),
+													Xe = g.sub(Ke, C.pos),
+													Ye = g.length(Xe);
+												Xe = Ye > 1e-4 ? g.div(Xe, Ye) : g.create(1, 0);
+												Ne = r(n, C.pos, Xe, Ye, .5, C.layer) < Ye
 											}
-											C && Ve.noCeilingReveal && He && 0 != T.layer && (T.noCeilingRevealTicker = .25)
+											I && He.noCeilingReveal && We && 0 != C.layer && (C.noCeilingRevealTicker = .25)
 										}
-										for (var Ye = 0; Ye < Ge.mask.length; Ye++)
-											if (b.intersect(Ge.mask[Ye], Be)) {
-												Fe = !0;
+										for (var Ze = 0; Ze < Ue.mask.length; Ze++)
+											if (y.intersect(Ue.mask[Ze], Fe)) {
+												Re = !0;
 												break
 											}
 									}
 								}
-								var Ze = 18;
-								Re && (1 & Ee && (1 & L.layer || !je) || 2 & L.layer && !Fe) && (Ee |= 2), (1 & Ee) != (1 & L.layer) || !Re || Fe && 0 != L.layer || (Ee |= 2, Ze += 100);
-								var Je = T.__id + (T.netData.downed ? 0 : 131072) + (C ? 65536 : 0);
-								a.addPIXIObj(T.container, P.Player, Ee, Ze, Je), T.isNew = !1
+								var Je = 18;
+								je && (1 & Be && (1 & E.layer || !Ne) || 2 & E.layer && !Re) && (Be |= 2), (1 & Be) != (1 & E.layer) || !je || Re && 0 != E.layer || (Be |= 2, Je += 100);
+								var Qe = C.__id + (C.netData.downed ? 0 : 131072) + (I ? 65536 : 0);
+								a.addPIXIObj(C.container, P.Player, Be, Je, Qe), C.isNew = !1
 							}
 						}
-						for (var Qe = this.getPlayerInfo(t).teamId, $e = this.getTeamInfo(Qe), et = 0; et < $e.playerIds.length; et++) {
-							var tt = $e.playerIds[et],
-								at = this.getPlayerById(tt);
-							at && tt == t && this.setTeammateData(tt, {
-								pos: g.copy(at.netData.pos),
-								health: at.localData.health,
+						for (var $e = this.getPlayerInfo(t).teamId, et = this.getTeamInfo($e), tt = 0; tt < et.playerIds.length; tt++) {
+							var at = et.playerIds[tt],
+								it = this.getPlayerById(at);
+							it && at == t && this.setTeammateData(at, {
+								pos: g.copy(it.netData.pos),
+								health: it.localData.health,
 								disconnected: !1,
-								dead: at.netData.dead,
-								downed: at.netData.downed
+								dead: it.netData.dead,
+								downed: it.netData.downed
 							});
-							var it = this.teammateData[tt];
-							if (it)
-								if (at) {
-									var ot = this.teammateData[tt];
-									ot.pos = g.copy(at.netData.pos), ot.posTarget = g.copy(at.netData.pos)
-								} else if (it) {
-								var nt = (c.player.moveSpeed, g.sub(it.posTarget, it.pos)),
-									rt = g.length(nt),
-									st = rt > 1e-4 ? g.div(nt, rt) : g.create(1, 0),
-									lt = Math.min(rt, it.posDelta * e / u.kTeamUpdateRate);
-								it.pos = g.add(it.pos, g.mul(st, lt))
+							var ot = this.teammateData[at];
+							if (ot)
+								if (it) {
+									var nt = this.teammateData[at];
+									nt.pos = g.copy(it.netData.pos), nt.posTarget = g.copy(it.netData.pos)
+								} else if (ot) {
+								var rt = (c.player.moveSpeed, g.sub(ot.posTarget, ot.pos)),
+									st = g.length(rt),
+									lt = st > 1e-4 ? g.div(rt, st) : g.create(1, 0),
+									ct = Math.min(st, ot.posDelta * e / u.kTeamUpdateRate);
+								ot.pos = g.add(ot.pos, g.mul(lt, ct))
 							}
 						}
 					}
@@ -24764,6 +24764,31 @@ webpackJsonp([0], {
 				locale: "es"
 			},
 			"word-order": "svo",
+			"index-create-account": "Crear cuenta",
+			"index-set-account-name": "Configurar su nombre",
+			"index-enter-name": "Ingrese su nombre",
+			"index-finish": "Terminar",
+			"index-delete-account": "Borrar cuenta",
+			"index-delete-account-desc": 'Ingresa "DELETE" para eliminar tu cuenta:',
+			"index-confirm": "Confirmar",
+			"index-customize-avatar": "Personalizar avatar",
+			"index-done": "Hecho",
+			"index-account": "Cuenta",
+			"index-log-in-with": "Inicia sesiÃ³n con",
+			"index-facebook": "Facebook",
+			"index-google": "Google",
+			"index-twitch": "Twitch",
+			"index-discord": "Discord",
+			"index-my-stats": "Mis estadÃ­sticas",
+			"index-link-account": "Enlazar cuentas",
+			"index-log-out": "Cerrar sesiÃ³n",
+			"index-change-avatar": "Cambiar avatar",
+			"index-change-account-name": "Cambiar el nombre",
+			"index-back": "AtrÃ¡s",
+			"index-link-account-to": "Enlace con",
+			"index-log-in-desc": "Iniciar sesiÃ³n!",
+			"index-logging-in": "Iniciando secciÃ³n",
+			"index-leaderboards": "RÃ¡nking",
 			"index-slogan": "2d Battle Royale",
 			"index-region": "RegiÃ³n",
 			"index-north-america": "NorteamÃ©rica",
@@ -26248,7 +26273,7 @@ webpackJsonp([0], {
 					}
 				}]), e
 			}(),
-			y = function() {
+			b = function() {
 				function e() {
 					i(this, e), this.projectilePool = new p.Pool(f)
 				}
@@ -26256,73 +26281,73 @@ webpackJsonp([0], {
 					key: "update",
 					value: function(e, t, a, i, o, n, p) {
 						for (var u = this.projectilePool.getPool(), f = 0; f < u.length; f++) {
-							var y = u[f];
-							if (y.active) {
-								var b = (r.items[y.type], y.rotDrag * (y.inWater ? 3 : 1));
-								y.rotVel *= 1 / (1 + e * b), y.rot += y.rotVel * e;
+							var b = u[f];
+							if (b.active) {
+								var y = (r.items[b.type], b.rotDrag * (b.inWater ? 3 : 1));
+								b.rotVel *= 1 / (1 + e * y), b.rot += b.rotVel * e;
 								for (var x = {
 										obj: null,
 										pen: 0
 									}, v = {
 										obj: null,
 										pen: 0
-									}, k = l.createCircle(y.pos, y.rad), _ = o.obstaclePool.getPool(), w = 0; w < _.length; w++) {
+									}, k = l.createCircle(b.pos, b.rad), _ = o.obstaclePool.getPool(), w = 0; w < _.length; w++) {
 									var S = _[w];
-									if (S.active && !S.dead && d.sameLayer(S.layer, y.layer)) {
+									if (S.active && !S.dead && d.sameLayer(S.layer, b.layer)) {
 										var M = l.intersect(S.collider, k);
 										if (M) {
-											var T = S.height > y.posZ ? x : v;
+											var T = S.height > b.posZ ? x : v;
 											M.pen > T.pen && (!T.obj || T.obj.height <= S.height) && (T.obj = S, T.pen = M.pen)
 										}
 									}
 								}
-								var P = m.div(m.sub(y.pos, y.posOld), e),
+								var P = m.div(m.sub(b.pos, b.posOld), e),
 									C = m.length(P);
-								if (x.obj && x.obj.__id != y.lastSoundObjId && C > 7.5) {
-									y.lastSoundObjId = x.obj.__id;
+								if (x.obj && x.obj.__id != b.lastSoundObjId && C > 7.5) {
+									b.lastSoundObjId = x.obj.__id;
 									var I = m.mul(m.normalizeSafe(P, m.create(1, 0)), -1);
-									x.obj.playHitFx(y.pos, I, y.layer, t, a)
+									x.obj.playHitFx(b.pos, I, b.layer, t, a)
 								}
-								var z = o.getGroundSurface(y.pos, y.layer);
-								y.posZ <= .01 && !y.inWater && "water" == z && (o.addRipple(y.pos, 0), y.inWater = !0);
-								var A = y.velZ;
-								if (y.velZ = (y.posZ - y.posZOld) / e, !y.isNew && !y.grounded && y.velZ >= 0 && A < 0) {
+								var z = o.getGroundSurface(b.pos, b.layer);
+								b.posZ <= .01 && !b.inWater && "water" == z && (o.addRipple(b.pos, 0), b.inWater = !0);
+								var A = b.velZ;
+								if (b.velZ = (b.posZ - b.posZOld) / e, !b.isNew && !b.grounded && b.velZ >= 0 && A < 0) {
 									var D = {
 										fn: "playGroup",
 										channel: "hits",
 										name: ""
 									};
 									if (v.obj) {
-										if (y.lastSoundObjId != v.obj.__id) {
-											y.lastSoundObjId = v.obj.__id;
+										if (b.lastSoundObjId != v.obj.__id) {
+											b.lastSoundObjId = v.obj.__id;
 											var O = s.Defs[v.obj.type];
 											D.name = O.sound.bullet
 										}
-									} else y.grounded = !0, D.name = g[z], void 0 === D.name && (D.name = "footstep_" + z, D.fn = "playGroup", D.channel = "sfx");
+									} else b.grounded = !0, D.name = g[z], void 0 === D.name && (D.name = "footstep_" + z, D.fn = "playGroup", D.channel = "sfx");
 									"" != D.name && a[D.fn](D.name, {
 										channel: D.channel,
-										soundPos: y.pos,
-										layer: y.layer,
+										soundPos: b.pos,
+										layer: b.layer,
 										muffled: !0
 									})
 								}
-								var L = y.layer,
-									E = y.posZ < .25 ? 14 : 25,
-									B = l.createCircle(y.pos, 3 * y.rad),
+								var L = b.layer,
+									E = b.posZ < .25 ? 14 : 25,
+									B = l.createCircle(b.pos, 3 * b.rad),
 									F = o.insideStructureStairs(B),
 									R = o.insideStructureMask(B);
-								!(y.posZ >= .25 && F && (1 & y.layer) == (1 & i.layer)) || R && 2 & i.layer || (L |= 2, E += 100), n.addPIXIObj(y.sprite, h.World, L, E);
-								var j = y.imgScale * c.remap(y.posZ, 0, r.projectile.maxHeight, 1, 2.5),
-									N = p.pointToScreen(y.pos),
+								!(b.posZ >= .25 && F && (1 & b.layer) == (1 & i.layer)) || R && 2 & i.layer || (L |= 2, E += 100), n.addPIXIObj(b.sprite, h.World, L, E);
+								var j = b.imgScale * c.remap(b.posZ, 0, r.projectile.maxHeight, 1, 2.5),
+									N = p.pointToScreen(b.pos),
 									q = p.pixels(j);
-								y.sprite.position.set(N.x, N.y), y.sprite.scale.set(q, q), y.sprite.rotation = y.rot, y.sprite.alpha = y.inWater ? .3 : 1
+								b.sprite.position.set(N.x, N.y), b.sprite.scale.set(q, q), b.sprite.rotation = b.rot, b.sprite.alpha = b.inWater ? .3 : 1
 							}
 						}
 					}
 				}]), e
 			}();
 		e.exports = {
-			ProjectileBarn: y
+			ProjectileBarn: b
 		}
 	},
 	vdJX: function(e, t, a) {
@@ -26333,6 +26358,31 @@ webpackJsonp([0], {
 				locale: "nl"
 			},
 			"word-order": "sov",
+			"index-create-account": "Maak een account",
+			"index-set-account-name": "Stel je account naam vast",
+			"index-enter-name": "Voer je naam in",
+			"index-finish": "Voltooid",
+			"index-delete-account": "Verwijder je account",
+			"index-delete-account-desc": 'Voer "DELETE" in om je account te verwijderen:',
+			"index-confirm": "Bevestig",
+			"index-customize-avatar": "Pas je avatar aan",
+			"index-done": "Klaar",
+			"index-account": "Account",
+			"index-log-in-with": "Log in met",
+			"index-facebook": "Facebook",
+			"index-google": "Google",
+			"index-twitch": "Twitch",
+			"index-discord": "Discord",
+			"index-my-stats": "Mijn statistieken",
+			"index-link-account": "Koppel Account",
+			"index-log-out": "Log uit",
+			"index-change-avatar": "Verander je avatar",
+			"index-change-account-name": "Verander je account naam",
+			"index-back": "Terug",
+			"index-link-account-to": "Koppel account aan",
+			"index-log-in-desc": "Log in!",
+			"index-logging-in": "Aan het inloggen",
+			"index-leaderboards": "Scoreborden",
 			"index-slogan": "2d Battle Royale",
 			"index-region": "Regio",
 			"index-north-america": "Noord-Amerika",
@@ -26964,10 +27014,10 @@ webpackJsonp([0], {
 									var g = u[h];
 									if (g.active)
 										for (var f = 0; f < g.mask.length; f++) {
-											var y = g.mask[f],
-												b = m.mul(m.sub(y.max, y.min), .5),
-												x = m.add(y.min, b);
-											a.drawRect(x.x - b.x, x.y - b.y, 2 * b.x, 2 * b.y)
+											var b = g.mask[f],
+												y = m.mul(m.sub(b.max, b.min), .5),
+												x = m.add(b.min, y);
+											a.drawRect(x.x - y.x, x.y - y.y, 2 * y.x, 2 * y.y)
 										}
 								}
 								a.endFill()
@@ -27031,12 +27081,12 @@ webpackJsonp([0], {
 				var g = t.getPlayerById(i.playerId);
 				g && 2 & g.layer && (i.layer |= 2);
 				var f = n.tracerColors[s.tracerColor],
-					y = f.regular;
-				g && g.isOnBrightSurface && (y = f.saturated), i.bulletTrail.scale.set(s.tracerLength, s.tracerWidth), i.bulletTrail.tint = y, i.bulletTrail.alpha = 1, i.reflectCount > 0 && (i.bulletTrail.alpha *= .5), i.container.visible = !0, a.addPIXIObj(i.container, h.Bullet, i.layer, 19)
+					b = f.regular;
+				g && g.isOnBrightSurface && (b = f.saturated), i.bulletTrail.scale.set(s.tracerLength, s.tracerWidth), i.bulletTrail.tint = b, i.bulletTrail.alpha = 1, i.reflectCount > 0 && (i.bulletTrail.alpha *= .5), i.container.visible = !0, a.addPIXIObj(i.container, h.Bullet, i.layer, 19)
 			},
 			update: function(e, t, a, i, o, u, g, f) {
-				for (var y = t.playerPool.getPool(), b = 0; b < this.bullets.length; b++) {
-					var x = this.bullets[b];
+				for (var b = t.playerPool.getPool(), y = 0; y < this.bullets.length; y++) {
+					var x = this.bullets[y];
 					if (x.collided && (x.scale = Math.max(x.scale - 6 * e, 0), x.scale <= 0 && (x.collided = !1, x.container.visible = !1)), x.alive) {
 						var v = x.distance - m.length(m.sub(x.startPos, x.pos)),
 							k = Math.min(v, e * x.speed),
@@ -27059,8 +27109,8 @@ webpackJsonp([0], {
 								})
 							}
 						}
-						for (var I = 0; I < y.length; I++) {
-							var z = y[I];
+						for (var I = 0; I < b.length; I++) {
+							var z = b[I];
 							if (z.active && !z.netData.dead && (d.sameLayer(z.netData.layer, x.layer) || 2 & z.netData.layer) && (z.__id != x.playerId || x.damageSelf)) {
 								var A = s.intersectSegmentCircle(_, x.pos, z.pos, n.player.radius);
 								A && S.push({
@@ -27186,8 +27236,8 @@ webpackJsonp([0], {
 			h = (a("5dFr"), a("85i3")),
 			g = a("m1+W"),
 			f = a("Jr6A"),
-			y = a("FT2U"),
-			b = a("fWTV"),
+			b = a("FT2U"),
+			y = a("fWTV"),
 			x = (a("SEs0"), a("xGI0")),
 			v = a("2Ex0"),
 			k = a("YfyY"),
@@ -27256,7 +27306,7 @@ webpackJsonp([0], {
 					var t = this;
 					i(this, e), this.gameCanvas = r("#cvs"), this.nameInput = r("#player-name-input-solo"), this.serverSelect = r("#server-select-main"), this.playSoloBtn = r("#btn-start-solo"), this.playDuoBtn = r("#btn-start-duo"), this.playSquadBtn = r("#btn-start-squad"), this.createTeamBtn = r("#btn-create-team"), this.joinTeamBtn = r("#btn-team-mobile-link-join"), this.leaveTeamBtn = r("#btn-team-leave"), this.muteBtns = r(".btn-sound-toggle"), this.masterSliders = r(".sl-master-volume"), this.soundSliders = r(".sl-sound-volume"), this.musicSliders = r(".sl-music-volume"), this.fullscreenBtn = r(".btn-fullscreen-toggle"), this.serverWarning = r("#server-warning"), this.languageSelect = r(".language-select"), this.startMenuWrapper = r("#start-menu-wrapper"), this.gameAreaWrapper = r("#game-area-wrapper"), this.config = new _, this.config.onModified = function() {
 						t.onConfigModified()
-					}, this.siteInfo = {}, this.localization = new b, this.localization.setLocale("en"), this.localization.localizeIndex(), this.account = new m(this.config, this.localization), this.loadoutMenu = new y(this.config), this.pingTest = new x, this.audioManager = new p, this.teamMenu = new k(this.config, this.pingTest, this.localization, this.joinGame.bind(this), this.audioManager), this.teamMenu.onLeave = this.onTeamMenuLeave.bind(this), this.pixi = null, this.game = null, this.initialized = !1, this.active = !1, this.contextListener = function(e) {
+					}, this.siteInfo = {}, this.localization = new y, this.localization.setLocale("en"), this.localization.localizeIndex(), this.account = new m(this.config, this.localization), this.loadoutMenu = new b(this.config), this.pingTest = new x, this.audioManager = new p, this.teamMenu = new k(this.config, this.pingTest, this.localization, this.joinGame.bind(this), this.audioManager), this.teamMenu.onLeave = this.onTeamMenuLeave.bind(this), this.pixi = null, this.game = null, this.initialized = !1, this.active = !1, this.contextListener = function(e) {
 						e.preventDefault()
 					}, this.errorMessage = "", this.errorCount = 0, this.playEnabled = !1, this.quickPlayPendingMode = 0, this.findGameTimeout = 0, this.playTimeout = 0, this.menuMusicIdx = 0, this.config.load(), this.pingTest.start(this.config.get("region"))
 				}
@@ -27273,8 +27323,8 @@ webpackJsonp([0], {
 							c = this.languageSelect,
 							m = (this.loadoutMenu, this.localization),
 							p = this.muteBtns,
-							y = this.masterSliders,
-							b = this.musicSliders,
+							b = this.masterSliders,
+							y = this.musicSliders,
 							x = this.nameInput,
 							k = this.playSoloBtn,
 							_ = this.playDuoBtn,
@@ -27310,24 +27360,24 @@ webpackJsonp([0], {
 											var g = t.twitch[h],
 												f = r("#featured-streamer-template").clone();
 											f.attr("class", "featured-streamer streamer-tooltip").attr("id", "");
-											var y = f.find("a");
-											y.html(g.name + " <span>" + g.viewers + " " + (1 != g.viewers ? "viewers" : "viewer") + "</span>"), y.css("background-image", "url(" + g.img + ")"), y.attr("href", g.url), p.append(f), d = !0
+											var b = f.find("a");
+											b.html(g.name + " <span>" + g.viewers + " " + (1 != g.viewers ? "viewers" : "viewer") + "</span>"), b.css("background-image", "url(" + g.img + ")"), b.attr("href", g.url), p.append(f), d = !0
 										}
 									m.css("display", d ? "block" : "none");
-									var b = r("#featured-youtuber"),
+									var y = r("#featured-youtuber"),
 										x = t.youtube && !d;
-									x && r(".btn-youtuber").attr("href", t.youtube.link).html(t.youtube.name), b.css("display", x ? "block" : "none"), t.promptConsent && v.showCookieConsent(e.config)
+									x && r(".btn-youtuber").attr("href", t.youtube.link).html(t.youtube.name), y.css("display", x ? "block" : "none"), t.promptConsent && v.showCookieConsent(e.config)
 								}), x.on("blur", function(t) {
 									e.setConfigFromDOM()
 								}), p.on("click", function() {
 									a.set("muteAudio", !a.get("muteAudio"))
-								}), y.on("input", function() {
+								}), b.on("input", function() {
 									var e = r(this).val() / 100;
 									t.setMasterVolume(e), a.set("masterVolume", e)
 								}), M.on("input", function() {
 									var e = r(this).val() / 100;
 									t.setSoundVolume(e), a.set("soundVolume", e)
-								}), b.on("input", function() {
+								}), y.on("input", function() {
 									var e = r(this).val() / 100;
 									t.setMusicVolume(e), a.set("musicVolume", e)
 								}), r(".modal-settings-item").children("input").each(function(e, t) {
@@ -27550,8 +27600,8 @@ webpackJsonp([0], {
 								},
 								h = (new Date).getTime(),
 								g = Math.max(0, this.findGameTimeout - h),
-								y = Math.min(3500, 1e3 + 500 * this.errorCount);
-							this.findGameTimeout = h + g + y, setTimeout(function() {
+								b = Math.min(3500, 1e3 + 500 * this.errorCount);
+							this.findGameTimeout = h + g + b, setTimeout(function() {
 								t.findGame(u)
 							}, g)
 						}
@@ -27671,11 +27721,11 @@ webpackJsonp([0], {
 		function n(e, t) {
 			if (t.scopedIn = e.readBoolean(), t.health = e.readFloat(0, 100, 8), t.boostDirty = e.readBoolean(), t.boostDirty && (t.boost = e.readFloat(0, 100, 8)), t.hasAction = e.readBoolean(), t.hasAction && (t.action = {}, t.action.time = e.readFloat(0, 10, 12), t.action.duration = e.readFloat(0, 10, 12), t.action.item = e.readItemType(), t.action.targetId = e.readUint16()), t.inventoryDirty = e.readBoolean(), t.inventoryDirty) {
 				t.curScope = e.readItemType(), t.inventory = {};
-				for (var a in b.bagSizes) t.inventory[a] = e.readUint16()
+				for (var a in y.bagSizes) t.inventory[a] = e.readUint16()
 			}
 			if (t.weapsDirty = e.readBoolean(), t.weapsDirty) {
 				t.curWeapIdx = e.readBits(2), e.readBits(6), t.weapons = [];
-				for (var i = 0; i < b.WeaponSlot.Count; i++) {
+				for (var i = 0; i < y.WeaponSlot.Count; i++) {
 					var o = {};
 					o.name = e.readItemType(), o.ammo = e.readUint8(), t.weapons.push(o)
 				}
@@ -27732,10 +27782,10 @@ webpackJsonp([0], {
 			}(),
 			g = a("DlZn"),
 			f = (a("8iex"), a("9xSA"), a("v8aM")),
-			y = f.EmoteSlot,
-			b = a("+0OL"),
+			b = f.EmoteSlot,
+			y = a("+0OL"),
 			x = a("DM7t"),
-			v = (b.Action, a("Bk7F")),
+			v = (y.Action, a("Bk7F")),
 			k = a("0od3"),
 			_ = a("/2+T"),
 			w = function() {
@@ -27764,9 +27814,9 @@ webpackJsonp([0], {
 			S = new w,
 			M = new w;
 		! function() {
-			for (var e = Object.keys(b.items), t = 0; t < e.length; t++) S.addType(e[t]);
-			for (var a = Object.keys(b.explosions), i = 0; i < a.length; i++) S.addType(a[i]);
-			for (var o = Object.keys(b.bullets), n = 0; n < o.length; n++) S.addType(o[n]);
+			for (var e = Object.keys(y.items), t = 0; t < e.length; t++) S.addType(e[t]);
+			for (var a = Object.keys(y.explosions), i = 0; i < a.length; i++) S.addType(a[i]);
+			for (var o = Object.keys(y.bullets), n = 0; n < o.length; n++) S.addType(o[n]);
 			for (var r = Object.keys(v.Defs), s = 0; s < r.length; s++) M.addType(r[s])
 		}();
 		var T = a("MeqN");
@@ -27890,11 +27940,11 @@ webpackJsonp([0], {
 		}, function(e, t) {}, function(e, t) {
 			t.type = e.readMapType(), t.pos = e.readVec(0, 0, 1024, 1024, 16), t.layer = e.readUint8()
 		}, function(e, t) {}), o(x.Type.Projectile, function(e, t) {
-			e.writeVec(t.pos, 0, 0, 1024, 1024, 16), e.writeFloat(t.posZ, 0, b.projectile.maxHeight, 8)
+			e.writeVec(t.pos, 0, 0, 1024, 1024, 16), e.writeFloat(t.posZ, 0, y.projectile.maxHeight, 8)
 		}, function(e, t) {
 			e.writeItemType(t.type), e.writeUint8(t.layer)
 		}, function(e, t) {
-			t.pos = e.readVec(0, 0, 1024, 1024, 16), t.posZ = e.readFloat(0, b.projectile.maxHeight, 8)
+			t.pos = e.readVec(0, 0, 1024, 1024, 16), t.posZ = e.readFloat(0, y.projectile.maxHeight, 8)
 		}, function(e, t) {
 			t.type = e.readItemType(), t.layer = e.readUint8()
 		}), o(x.Type.Smoke, function(e, t) {
@@ -27932,14 +27982,14 @@ webpackJsonp([0], {
 					key: "serialize",
 					value: function(e) {
 						e.writeUint32(this.protocol), e.writeString(this.privData), e.writeString(this.name, 16);
-						for (var t = 0; t < y.Count; t++) e.writeUint8(this.emotes[t]);
+						for (var t = 0; t < b.Count; t++) e.writeUint8(this.emotes[t]);
 						e.writeUint8(this.useTouch), e.writeUint8(this.bot)
 					}
 				}, {
 					key: "deserialize",
 					value: function(e) {
 						this.protocol = e.readUint32(), this.privData = e.readString(), this.name = e.readString(16);
-						for (var t = 0; t < y.Count; t++) {
+						for (var t = 0; t < b.Count; t++) {
 							var a = e.readUint8();
 							this.emotes.push(a)
 						}
@@ -28139,11 +28189,11 @@ webpackJsonp([0], {
 						0 != (a & j.ActivePlayerId) && (this.activePlayerId = e.readUint16(), this.activePlayerIdDirty = !0);
 						var f = {};
 						if (n(e, f), this.activePlayerData = f, 0 != (a & j.AliveCount) && (this.aliveCount = e.readUint8(), this.aliveDirty = !0), this.gasT = e.readFloat(0, 1, 16), 0 != (a & j.Gas)) {
-							var y = {};
-							l(e, y), this.gasData = y, this.gasDirty = !0
+							var b = {};
+							l(e, b), this.gasData = b, this.gasDirty = !0
 						}
 						if (0 != (a & j.TeamInfos))
-							for (var b = e.readUint8(), x = 0; x < b; x++) {
+							for (var y = e.readUint8(), x = 0; x < y; x++) {
 								var v = {};
 								s(e, v), this.teams.push(v)
 							}
@@ -28403,4 +28453,4 @@ webpackJsonp([0], {
 		e.exports = r
 	}
 }, ["yZ5m"]);
-//# sourceMappingURL=app.caaf3633.js.map
+//# sourceMappingURL=app.5857a9f2.js.map
